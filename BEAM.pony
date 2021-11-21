@@ -72,7 +72,8 @@ actor BEAM
       None
     end
 
-    Ei.ei_x_free(NullablePointer[EixbuffTAG](buff))
+    let ponybuf: EixbuffTAG iso = recover iso buff.clone() end
+    Ei.ei_x_free(NullablePointer[EixbuffTAG](consume ponybuf))
     wait_for_msg()
 
   fun process_msg(buff: EixbuffTAG) =>
@@ -91,5 +92,4 @@ actor BEAM
     @printf("[%d - %d]:%d type: %d size: %d\n".cstring(), indexloc, indexptr.num, buff.index, typeptr.num, sizeptr.num)
     buff.introspect("Populated")
 
-    let ponybuffer: PonyErlangBuffer iso = buff.to_PonyErlangBuffer()
 

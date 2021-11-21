@@ -1,3 +1,5 @@
+use @pony_ctx[Pointer[None]]()
+use @pony_alloc[Pointer[U8] iso^](ctx: Pointer[None], size: USize)
 use @memcpy[None](dest: Pointer[None], src: Pointer[None], size: USize)
 
 /*
@@ -874,8 +876,24 @@ struct EixbuffTAG
 
   fun introspect(txt: String) =>
     @printf("%s: [ExibuffTAG]: Addr:[%lx], buffsz: %d,index: %d\n".cstring(), txt.cstring(), this, this.buffsz, this.index)
+  fun clone(): EixbuffTAG iso^ =>
+    let rv: EixbuffTAG iso = recover iso EixbuffTAG end
+    rv.buff = @pony_alloc(@pony_ctx(), this.buffsz.usize())
+    @memcpy(rv.buff, this.buff, this.buffsz.usize())
+    rv.buffsz = this.buffsz
+    rv.index = this.index
+    consume rv
+
+
+
+
+
+
+
+
 
 //use @memcpy[None](dest: U64, src: U64, size: USize)
+/*
   fun to_array_iso(): Array[U8] iso^ =>
     let rv: Array[U8] iso = recover iso Array[U8].init(0, this.buffsz.usize()) end
     @memcpy(rv.cpointer(), this.buff, this.buffsz.usize())
@@ -898,7 +916,7 @@ class PonyErlangBuffer
     array = consume array'
     index = index'
 
-
+*/
 /*
   Source: <builtin>:0
   Original Name: __NSConstantString_tag
