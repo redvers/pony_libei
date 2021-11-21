@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./ei.xml"/>
+                    <uses>
+                      <use id="_470" name="ei_connect_init"
+     ponyname="ei_connect_init"
+     fid="f45"
+     lineno="399"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="thisnodename" type="String"/>
+       <usearg name="cookie" type="String"/>
+       <usearg name="creation" type="I16"/>
+     </useargs>
+  </use>
+  <use id="_471" name="ei_connect_xinit"
+     ponyname="ei_connect_xinit"
+     fid="f45"
+     lineno="401"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="thishostname" type="String"/>
+       <usearg name="thisalivename" type="String"/>
+       <usearg name="thisnodename" type="String"/>
+       <usearg name="thisipaddr" type="NullablePointer[Inaddr]"/>
+       <usearg name="cookie" type="String"/>
+       <usearg name="creation" type="I16"/>
+     </useargs>
+  </use>
+  <use id="_472" name="ei_connect_init_ussi"
+     ponyname="ei_connect_init_ussi"
+     fid="f45"
+     lineno="406"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="thisnodename" type="String"/>
+       <usearg name="cookie" type="String"/>
+       <usearg name="creation" type="I16"/>
+       <usearg name="cbs" type="NullablePointer[Anon]"/>
+       <usearg name="cbssz" type="I32"/>
+       <usearg name="setupcontext" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_473" name="ei_connect_xinit_ussi"
+     ponyname="ei_connect_xinit_ussi"
+     fid="f45"
+     lineno="410"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="thishostname" type="String"/>
+       <usearg name="thisalivename" type="String"/>
+       <usearg name="thisnodename" type="String"/>
+       <usearg name="thisipaddr" type="NullablePointer[Inaddr]"/>
+       <usearg name="cookie" type="String"/>
+       <usearg name="creation" type="I16"/>
+       <usearg name="cbs" type="NullablePointer[Anon]"/>
+       <usearg name="cbssz" type="I32"/>
+       <usearg name="setupcontext" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_474" name="ei_connect"
+     ponyname="ei_connect"
+     fid="f45"
+     lineno="416"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="nodename" type="String"/>
+     </useargs>
+  </use>
+  <use id="_475" name="ei_connect_tmo"
+     ponyname="ei_connect_tmo"
+     fid="f45"
+     lineno="417"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="nodename" type="String"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_476" name="ei_connect_host_port"
+     ponyname="ei_connect_host_port"
+     fid="f45"
+     lineno="418"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="hostname" type="String"/>
+       <usearg name="port" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_477" name="ei_connect_host_port_tmo"
+     ponyname="ei_connect_host_port_tmo"
+     fid="f45"
+     lineno="419"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="hostname" type="String"/>
+       <usearg name="port" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_478" name="ei_xconnect"
+     ponyname="ei_xconnect"
+     fid="f45"
+     lineno="420"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="adr" type="NullablePointer[Inaddr]"/>
+       <usearg name="alivename" type="String"/>
+     </useargs>
+  </use>
+  <use id="_479" name="ei_xconnect_tmo"
+     ponyname="ei_xconnect_tmo"
+     fid="f45"
+     lineno="421"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="adr" type="NullablePointer[Inaddr]"/>
+       <usearg name="alivename" type="String"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_480" name="ei_xconnect_host_port"
+     ponyname="ei_xconnect_host_port"
+     fid="f45"
+     lineno="422"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="adr" type="NullablePointer[Inaddr]"/>
+       <usearg name="port" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_481" name="ei_xconnect_host_port_tmo"
+     ponyname="ei_xconnect_host_port_tmo"
+     fid="f45"
+     lineno="423"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="adr" type="NullablePointer[Inaddr]"/>
+       <usearg name="port" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_482" name="ei_receive"
+     ponyname="ei_receive"
+     fid="f45"
+     lineno="425"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="bufp" type="String"/>
+       <usearg name="bufsize" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_483" name="ei_receive_tmo"
+     ponyname="ei_receive_tmo"
+     fid="f45"
+     lineno="426"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="bufp" type="String"/>
+       <usearg name="bufsize" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_484" name="ei_receive_msg"
+     ponyname="ei_receive_msg"
+     fid="f45"
+     lineno="427"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="msg" type="NullablePointer[ErlangMsg]"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_485" name="ei_receive_msg_tmo"
+     ponyname="ei_receive_msg_tmo"
+     fid="f45"
+     lineno="428"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="msg" type="NullablePointer[Anon]"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_486" name="ei_xreceive_msg"
+     ponyname="ei_xreceive_msg"
+     fid="f45"
+     lineno="429"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="msg" type="NullablePointer[ErlangMsg]"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_487" name="ei_xreceive_msg_tmo"
+     ponyname="ei_xreceive_msg_tmo"
+     fid="f45"
+     lineno="430"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="msg" type="NullablePointer[Anon]"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_488" name="ei_send"
+     ponyname="ei_send"
+     fid="f45"
+     lineno="432"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_489" name="ei_send_tmo"
+     ponyname="ei_send_tmo"
+     fid="f45"
+     lineno="433"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_490" name="ei_reg_send"
+     ponyname="ei_reg_send"
+     fid="f45"
+     lineno="434"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="servername" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_491" name="ei_reg_send_tmo"
+     ponyname="ei_reg_send_tmo"
+     fid="f45"
+     lineno="435"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="servername" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_492" name="ei_rpc"
+     ponyname="ei_rpc"
+     fid="f45"
+     lineno="437"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="mod" type="String"/>
+       <usearg name="fun" type="String"/>
+       <usearg name="inbuf" type="String"/>
+       <usearg name="inbuflen" type="I32"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_493" name="ei_xrpc_to"
+     ponyname="ei_xrpc_to"
+     fid="f45"
+     lineno="439"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="mod" type="String"/>
+       <usearg name="fun" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_494" name="ei_rpc_to"
+     ponyname="ei_rpc_to"
+     fid="f45"
+     lineno="441"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="mod" type="String"/>
+       <usearg name="fun" type="String"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_495" name="ei_rpc_from"
+     ponyname="ei_rpc_from"
+     fid="f45"
+     lineno="443"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="timeout" type="I32"/>
+       <usearg name="msg" type="NullablePointer[Anon]"/>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_496" name="ei_publish"
+     ponyname="ei_publish"
+     fid="f45"
+     lineno="446"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="port" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_497" name="ei_publish_tmo"
+     ponyname="ei_publish_tmo"
+     fid="f45"
+     lineno="447"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="port" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_498" name="ei_listen"
+     ponyname="ei_listen"
+     fid="f45"
+     lineno="448"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="port" type="Pointer[I32]"/>
+       <usearg name="backlog" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_499" name="ei_xlisten"
+     ponyname="ei_xlisten"
+     fid="f45"
+     lineno="449"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="adr" type="NullablePointer[Inaddr]"/>
+       <usearg name="port" type="Pointer[I32]"/>
+       <usearg name="backlog" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_500" name="ei_accept"
+     ponyname="ei_accept"
+     fid="f45"
+     lineno="450"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="lfd" type="I32"/>
+       <usearg name="conp" type="NullablePointer[ErlConnect]"/>
+     </useargs>
+  </use>
+  <use id="_501" name="ei_accept_tmo"
+     ponyname="ei_accept_tmo"
+     fid="f45"
+     lineno="451"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="lfd" type="I32"/>
+       <usearg name="conp" type="NullablePointer[Anon]"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_502" name="ei_unpublish"
+     ponyname="ei_unpublish"
+     fid="f45"
+     lineno="452"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+     </useargs>
+  </use>
+  <use id="_503" name="ei_unpublish_tmo"
+     ponyname="ei_unpublish_tmo"
+     fid="f45"
+     lineno="453"
+     rv="I32">
+     <useargs>
+       <usearg name="alive" type="String"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_504" name="ei_close_connection"
+     ponyname="ei_close_connection"
+     fid="f45"
+     lineno="455"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_505" name="ei_thisnodename"
+     ponyname="ei_thisnodename"
+     fid="f45"
+     lineno="457"
+     rv="String">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+     </useargs>
+  </use>
+  <use id="_506" name="ei_thishostname"
+     ponyname="ei_thishostname"
+     fid="f45"
+     lineno="458"
+     rv="String">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+     </useargs>
+  </use>
+  <use id="_507" name="ei_thisalivename"
+     ponyname="ei_thisalivename"
+     fid="f45"
+     lineno="459"
+     rv="String">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+     </useargs>
+  </use>
+  <use id="_508" name="ei_self"
+     ponyname="ei_self"
+     fid="f45"
+     lineno="461"
+     rv="NullablePointer[Anon]">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+     </useargs>
+  </use>
+  <use id="_509" name="ei_make_pid"
+     ponyname="ei_make_pid"
+     fid="f45"
+     lineno="462"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="pid" type="NullablePointer[ErlangPid]"/>
+     </useargs>
+  </use>
+  <use id="_510" name="ei_make_ref"
+     ponyname="ei_make_ref"
+     fid="f45"
+     lineno="463"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="ref" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_511" name="ei_set_compat_rel"
+     ponyname="ei_set_compat_rel"
+     fid="f45"
+     lineno="469"
+     rv="None">
+     <useargs>
+       <usearg name="rel" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_512" name="ei_set_tracelevel"
+     ponyname="ei_set_tracelevel"
+     fid="f45"
+     lineno="470"
+     rv="None">
+     <useargs>
+       <usearg name="parg0" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_513" name="ei_get_tracelevel"
+     ponyname="ei_get_tracelevel"
+     fid="f45"
+     lineno="471"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_514" name="ei_gethostbyname"
+     ponyname="ei_gethostbyname"
+     fid="f45"
+     lineno="477"
+     rv="NullablePointer[Hostent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_515" name="ei_gethostbyaddr"
+     ponyname="ei_gethostbyaddr"
+     fid="f45"
+     lineno="478"
+     rv="NullablePointer[Hostent]">
+     <useargs>
+       <usearg name="addr" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_516" name="ei_gethostbyname_r"
+     ponyname="ei_gethostbyname_r"
+     fid="f45"
+     lineno="479"
+     rv="NullablePointer[Hostent]">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="hostp" type="NullablePointer[Hostent]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="I32"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_517" name="ei_gethostbyaddr_r"
+     ponyname="ei_gethostbyaddr_r"
+     fid="f45"
+     lineno="484"
+     rv="NullablePointer[Hostent]">
+     <useargs>
+       <usearg name="addr" type="String"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="type" type="I32"/>
+       <usearg name="hostp" type="NullablePointer[Hostent]"/>
+       <usearg name="buffer" type="String"/>
+       <usearg name="buflen" type="I32"/>
+       <usearg name="herrnop" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_518" name="ei_encode_version"
+     ponyname="ei_encode_version"
+     fid="f45"
+     lineno="495"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_519" name="ei_x_encode_version"
+     ponyname="ei_x_encode_version"
+     fid="f45"
+     lineno="496"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_520" name="ei_encode_long"
+     ponyname="ei_encode_long"
+     fid="f45"
+     lineno="497"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_521" name="ei_x_encode_long"
+     ponyname="ei_x_encode_long"
+     fid="f45"
+     lineno="498"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_522" name="ei_encode_ulong"
+     ponyname="ei_encode_ulong"
+     fid="f45"
+     lineno="499"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_523" name="ei_x_encode_ulong"
+     ponyname="ei_x_encode_ulong"
+     fid="f45"
+     lineno="500"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_524" name="ei_encode_double"
+     ponyname="ei_encode_double"
+     fid="f45"
+     lineno="501"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_525" name="ei_x_encode_double"
+     ponyname="ei_x_encode_double"
+     fid="f45"
+     lineno="502"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="dbl" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_526" name="ei_encode_boolean"
+     ponyname="ei_encode_boolean"
+     fid="f45"
+     lineno="503"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_527" name="ei_x_encode_boolean"
+     ponyname="ei_x_encode_boolean"
+     fid="f45"
+     lineno="504"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_528" name="ei_encode_char"
+     ponyname="ei_encode_char"
+     fid="f45"
+     lineno="505"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="U8"/>
+     </useargs>
+  </use>
+  <use id="_529" name="ei_x_encode_char"
+     ponyname="ei_x_encode_char"
+     fid="f45"
+     lineno="506"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="U8"/>
+     </useargs>
+  </use>
+  <use id="_530" name="ei_encode_string"
+     ponyname="ei_encode_string"
+     fid="f45"
+     lineno="507"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+     </useargs>
+  </use>
+  <use id="_531" name="ei_encode_string_len"
+     ponyname="ei_encode_string_len"
+     fid="f45"
+     lineno="508"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_532" name="ei_x_encode_string"
+     ponyname="ei_x_encode_string"
+     fid="f45"
+     lineno="509"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_533" name="ei_x_encode_string_len"
+     ponyname="ei_x_encode_string_len"
+     fid="f45"
+     lineno="510"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_534" name="ei_encode_atom"
+     ponyname="ei_encode_atom"
+     fid="f45"
+     lineno="511"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+     </useargs>
+  </use>
+  <use id="_535" name="ei_encode_atom_as"
+     ponyname="ei_encode_atom_as"
+     fid="f45"
+     lineno="512"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="from" type="I32"/>
+       <usearg name="to" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_536" name="ei_encode_atom_len"
+     ponyname="ei_encode_atom_len"
+     fid="f45"
+     lineno="514"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_537" name="ei_encode_atom_len_as"
+     ponyname="ei_encode_atom_len_as"
+     fid="f45"
+     lineno="515"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="from" type="I32"/>
+       <usearg name="to" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_538" name="ei_x_encode_atom"
+     ponyname="ei_x_encode_atom"
+     fid="f45"
+     lineno="517"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+     </useargs>
+  </use>
+  <use id="_539" name="ei_x_encode_atom_as"
+     ponyname="ei_x_encode_atom_as"
+     fid="f45"
+     lineno="518"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="from" type="I32"/>
+       <usearg name="to" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_540" name="ei_x_encode_atom_len"
+     ponyname="ei_x_encode_atom_len"
+     fid="f45"
+     lineno="520"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_541" name="ei_x_encode_atom_len_as"
+     ponyname="ei_x_encode_atom_len_as"
+     fid="f45"
+     lineno="521"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="String"/>
+       <usearg name="len" type="I32"/>
+       <usearg name="from" type="I32"/>
+       <usearg name="to" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_542" name="ei_encode_binary"
+     ponyname="ei_encode_binary"
+     fid="f45"
+     lineno="523"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[None]"/>
+       <usearg name="len" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_543" name="ei_encode_bitstring"
+     ponyname="ei_encode_bitstring"
+     fid="f45"
+     lineno="524"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="bitoffs" type="U64"/>
+       <usearg name="bits" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_544" name="ei_x_encode_binary"
+     ponyname="ei_x_encode_binary"
+     fid="f45"
+     lineno="525"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="s" type="Pointer[None]"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_545" name="ei_x_encode_bitstring"
+     ponyname="ei_x_encode_bitstring"
+     fid="f45"
+     lineno="526"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="bitoffs" type="U64"/>
+       <usearg name="bits" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_546" name="ei_encode_pid"
+     ponyname="ei_encode_pid"
+     fid="f45"
+     lineno="527"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_547" name="ei_x_encode_pid"
+     ponyname="ei_x_encode_pid"
+     fid="f45"
+     lineno="528"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="pid" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_548" name="ei_encode_fun"
+     ponyname="ei_encode_fun"
+     fid="f45"
+     lineno="529"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_549" name="ei_x_encode_fun"
+     ponyname="ei_x_encode_fun"
+     fid="f45"
+     lineno="530"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="fun" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_550" name="ei_encode_port"
+     ponyname="ei_encode_port"
+     fid="f45"
+     lineno="531"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_551" name="ei_x_encode_port"
+     ponyname="ei_x_encode_port"
+     fid="f45"
+     lineno="532"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_552" name="ei_encode_ref"
+     ponyname="ei_encode_ref"
+     fid="f45"
+     lineno="533"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_553" name="ei_x_encode_ref"
+     ponyname="ei_x_encode_ref"
+     fid="f45"
+     lineno="534"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_554" name="ei_encode_trace"
+     ponyname="ei_encode_trace"
+     fid="f45"
+     lineno="535"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_555" name="ei_x_encode_trace"
+     ponyname="ei_x_encode_trace"
+     fid="f45"
+     lineno="536"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_556" name="ei_encode_tuple_header"
+     ponyname="ei_encode_tuple_header"
+     fid="f45"
+     lineno="537"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_557" name="ei_x_encode_tuple_header"
+     ponyname="ei_x_encode_tuple_header"
+     fid="f45"
+     lineno="538"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_558" name="ei_encode_list_header"
+     ponyname="ei_encode_list_header"
+     fid="f45"
+     lineno="539"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_559" name="ei_x_encode_list_header"
+     ponyname="ei_x_encode_list_header"
+     fid="f45"
+     lineno="540"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_560" name="ei_x_encode_empty_list"
+     ponyname="ei_x_encode_empty_list"
+     fid="f45"
+     lineno="542"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_561" name="ei_encode_map_header"
+     ponyname="ei_encode_map_header"
+     fid="f45"
+     lineno="543"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_562" name="ei_x_encode_map_header"
+     ponyname="ei_x_encode_map_header"
+     fid="f45"
+     lineno="544"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_563" name="ei_get_type"
+     ponyname="ei_get_type"
+     fid="f45"
+     lineno="555"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="typee" type="Pointer[I32]"/>
+       <usearg name="size" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_564" name="ei_decode_version"
+     ponyname="ei_decode_version"
+     fid="f45"
+     lineno="564"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="version" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_565" name="ei_decode_long"
+     ponyname="ei_decode_long"
+     fid="f45"
+     lineno="565"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_566" name="ei_decode_ulong"
+     ponyname="ei_decode_ulong"
+     fid="f45"
+     lineno="566"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_567" name="ei_decode_double"
+     ponyname="ei_decode_double"
+     fid="f45"
+     lineno="567"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_568" name="ei_decode_boolean"
+     ponyname="ei_decode_boolean"
+     fid="f45"
+     lineno="568"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_569" name="ei_decode_char"
+     ponyname="ei_decode_char"
+     fid="f45"
+     lineno="569"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+     </useargs>
+  </use>
+  <use id="_570" name="ei_decode_string"
+     ponyname="ei_decode_string"
+     fid="f45"
+     lineno="570"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+     </useargs>
+  </use>
+  <use id="_571" name="ei_decode_atom"
+     ponyname="ei_decode_atom"
+     fid="f45"
+     lineno="571"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+     </useargs>
+  </use>
+  <use id="_572" name="ei_decode_atom_as"
+     ponyname="ei_decode_atom_as"
+     fid="f45"
+     lineno="572"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="String"/>
+       <usearg name="destlen" type="I32"/>
+       <usearg name="want" type="I32"/>
+       <usearg name="was" type="Pointer[I32]"/>
+       <usearg name="result" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_573" name="ei_decode_binary"
+     ponyname="ei_decode_binary"
+     fid="f45"
+     lineno="573"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[None]"/>
+       <usearg name="len" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_574" name="ei_decode_bitstring"
+     ponyname="ei_decode_bitstring"
+     fid="f45"
+     lineno="574"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="pp" type="Array[String]"/>
+       <usearg name="bitoffsp" type="Pointer[U32]"/>
+       <usearg name="nbitsp" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_575" name="ei_decode_fun"
+     ponyname="ei_decode_fun"
+     fid="f45"
+     lineno="577"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_576" name="free_fun"
+     ponyname="free_fun"
+     fid="f45"
+     lineno="578"
+     rv="None">
+     <useargs>
+       <usearg name="f" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_577" name="ei_decode_pid"
+     ponyname="ei_decode_pid"
+     fid="f45"
+     lineno="579"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[ErlangPid]"/>
+     </useargs>
+  </use>
+  <use id="_578" name="ei_decode_port"
+     ponyname="ei_decode_port"
+     fid="f45"
+     lineno="580"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_579" name="ei_decode_ref"
+     ponyname="ei_decode_ref"
+     fid="f45"
+     lineno="581"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_580" name="ei_decode_trace"
+     ponyname="ei_decode_trace"
+     fid="f45"
+     lineno="582"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_581" name="ei_decode_tuple_header"
+     ponyname="ei_decode_tuple_header"
+     fid="f45"
+     lineno="583"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_582" name="ei_decode_list_header"
+     ponyname="ei_decode_list_header"
+     fid="f45"
+     lineno="584"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_583" name="ei_decode_map_header"
+     ponyname="ei_decode_map_header"
+     fid="f45"
+     lineno="585"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="arity" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_584" name="ei_decode_iodata"
+     ponyname="ei_decode_iodata"
+     fid="f45"
+     lineno="586"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="szp" type="Pointer[I32]"/>
+       <usearg name="outbuf" type="String"/>
+     </useargs>
+  </use>
+  <use id="_585" name="ei_decode_ei_term"
+     ponyname="ei_decode_ei_term"
+     fid="f45"
+     lineno="594"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="term" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_586" name="ei_print_term"
+     ponyname="ei_print_term"
+     fid="f45"
+     lineno="601"
+     rv="I32">
+     <useargs>
+       <usearg name="fp" type="NullablePointer[IOFILE]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_587" name="ei_s_print_term"
+     ponyname="ei_s_print_term"
+     fid="f45"
+     lineno="602"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="Array[String]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_588" name="ei_x_format"
+     ponyname="ei_x_format"
+     fid="f45"
+     lineno="608"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="fmt" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_589" name="ei_x_format_wo_ver"
+     ponyname="ei_x_format_wo_ver"
+     fid="f45"
+     lineno="609"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="fmt" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_590" name="ei_x_new"
+     ponyname="ei_x_new"
+     fid="f45"
+     lineno="611"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_591" name="ei_x_new_with_version"
+     ponyname="ei_x_new_with_version"
+     fid="f45"
+     lineno="612"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_592" name="ei_x_free"
+     ponyname="ei_x_free"
+     fid="f45"
+     lineno="613"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_593" name="ei_x_append"
+     ponyname="ei_x_append"
+     fid="f45"
+     lineno="614"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="x2" type="NullablePointer[EixbuffTAG]"/>
+     </useargs>
+  </use>
+  <use id="_594" name="ei_x_append_buf"
+     ponyname="ei_x_append_buf"
+     fid="f45"
+     lineno="615"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="buf" type="String"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_595" name="ei_skip_term"
+     ponyname="ei_skip_term"
+     fid="f45"
+     lineno="616"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_596" name="ei_cmp_refs"
+     ponyname="ei_cmp_refs"
+     fid="f45"
+     lineno="618"
+     rv="I32">
+     <useargs>
+       <usearg name="a" type="NullablePointer[Anon]"/>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_597" name="ei_cmp_pids"
+     ponyname="ei_cmp_pids"
+     fid="f45"
+     lineno="619"
+     rv="I32">
+     <useargs>
+       <usearg name="a" type="NullablePointer[Anon]"/>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_598" name="ei_cmp_ports"
+     ponyname="ei_cmp_ports"
+     fid="f45"
+     lineno="620"
+     rv="I32">
+     <useargs>
+       <usearg name="a" type="NullablePointer[Anon]"/>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_599" name="ei_init"
+     ponyname="ei_init"
+     fid="f45"
+     lineno="626"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_600" name="ei_global_names"
+     ponyname="ei_global_names"
+     fid="f45"
+     lineno="631"
+     rv="Array[String]">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="count" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_601" name="ei_global_whereis"
+     ponyname="ei_global_whereis"
+     fid="f45"
+     lineno="632"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="name" type="String"/>
+       <usearg name="pid" type="NullablePointer[ErlangPid]"/>
+       <usearg name="node" type="String"/>
+     </useargs>
+  </use>
+  <use id="_602" name="ei_global_register"
+     ponyname="ei_global_register"
+     fid="f45"
+     lineno="633"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="name" type="String"/>
+       <usearg name="self" type="NullablePointer[ErlangPid]"/>
+     </useargs>
+  </use>
+  <use id="_603" name="ei_global_unregister"
+     ponyname="ei_global_unregister"
+     fid="f45"
+     lineno="634"
+     rv="I32">
+     <useargs>
+       <usearg name="ec" type="NullablePointer[Eicnodes]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_604" name="ei_decode_longlong"
+     ponyname="ei_decode_longlong"
+     fid="f45"
+     lineno="657"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[I64]"/>
+     </useargs>
+  </use>
+  <use id="_605" name="ei_decode_ulonglong"
+     ponyname="ei_decode_ulonglong"
+     fid="f45"
+     lineno="658"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_606" name="ei_encode_longlong"
+     ponyname="ei_encode_longlong"
+     fid="f45"
+     lineno="659"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_607" name="ei_encode_ulonglong"
+     ponyname="ei_encode_ulonglong"
+     fid="f45"
+     lineno="660"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_608" name="ei_x_encode_longlong"
+     ponyname="ei_x_encode_longlong"
+     fid="f45"
+     lineno="661"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_609" name="ei_x_encode_ulonglong"
+     ponyname="ei_x_encode_ulonglong"
+     fid="f45"
+     lineno="662"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="n" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_610" name="ei_decode_intlist"
+     ponyname="ei_decode_intlist"
+     fid="f45"
+     lineno="672"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="a" type="Pointer[I64]"/>
+       <usearg name="count" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_611" name="ei_receive_encoded"
+     ponyname="ei_receive_encoded"
+     fid="f45"
+     lineno="681"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="bufp" type="Array[String]"/>
+       <usearg name="bufsz" type="Pointer[I32]"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="msglen" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_612" name="ei_receive_encoded_tmo"
+     ponyname="ei_receive_encoded_tmo"
+     fid="f45"
+     lineno="683"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="bufp" type="Array[String]"/>
+       <usearg name="bufsz" type="Pointer[I32]"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="msglen" type="Pointer[I32]"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_613" name="ei_send_encoded"
+     ponyname="ei_send_encoded"
+     fid="f45"
+     lineno="685"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="msg" type="String"/>
+       <usearg name="msglen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_614" name="ei_send_encoded_tmo"
+     ponyname="ei_send_encoded_tmo"
+     fid="f45"
+     lineno="686"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="to" type="NullablePointer[Anon]"/>
+       <usearg name="msg" type="String"/>
+       <usearg name="msglen" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_615" name="ei_send_reg_encoded"
+     ponyname="ei_send_reg_encoded"
+     fid="f45"
+     lineno="688"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="from" type="NullablePointer[Anon]"/>
+       <usearg name="to" type="String"/>
+       <usearg name="msg" type="String"/>
+       <usearg name="msglen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_616" name="ei_send_reg_encoded_tmo"
+     ponyname="ei_send_reg_encoded_tmo"
+     fid="f45"
+     lineno="690"
+     rv="I32">
+     <useargs>
+       <usearg name="fd" type="I32"/>
+       <usearg name="from" type="NullablePointer[Anon]"/>
+       <usearg name="to" type="String"/>
+       <usearg name="msg" type="String"/>
+       <usearg name="msglen" type="I32"/>
+       <usearg name="ms" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_617" name="ei_encode_big"
+     ponyname="ei_encode_big"
+     fid="f45"
+     lineno="704"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="big" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_618" name="ei_x_encode_big"
+     ponyname="ei_x_encode_big"
+     fid="f45"
+     lineno="705"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
+       <usearg name="big" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_619" name="ei_decode_big"
+     ponyname="ei_decode_big"
+     fid="f45"
+     lineno="706"
+     rv="I32">
+     <useargs>
+       <usearg name="buf" type="String"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="p" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_620" name="ei_big_comp"
+     ponyname="ei_big_comp"
+     fid="f45"
+     lineno="707"
+     rv="I32">
+     <useargs>
+       <usearg name="x" type="NullablePointer[Anon]"/>
+       <usearg name="y" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_621" name="ei_big_to_double"
+     ponyname="ei_big_to_double"
+     fid="f45"
+     lineno="708"
+     rv="I32">
+     <useargs>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+       <usearg name="resp" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_622" name="ei_small_to_big"
+     ponyname="ei_small_to_big"
+     fid="f45"
+     lineno="709"
+     rv="I32">
+     <useargs>
+       <usearg name="s" type="I32"/>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use>
+  <use id="_623" name="ei_alloc_big"
+     ponyname="ei_alloc_big"
+     fid="f45"
+     lineno="710"
+     rv="NullablePointer[Anon]">
+     <useargs>
+       <usearg name="arity" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_624" name="ei_free_big"
+     ponyname="ei_free_big"
+     fid="f45"
+     lineno="711"
+     rv="None">
+     <useargs>
+       <usearg name="b" type="NullablePointer[Anon]"/>
+     </useargs>
+  </use></uses>
+</castxml2pony>
+

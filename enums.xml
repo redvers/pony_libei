@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./ei.xml"/>
+<enums>
+  <enum id="_278" name="Sockettype">
+    <enummember name="SOCKSTREAM" init="1"/>,
+    <enummember name="SOCKDGRAM" init="2"/>,
+    <enummember name="SOCKRAW" init="3"/>,
+    <enummember name="SOCKRDM" init="4"/>,
+    <enummember name="SOCKSEQPACKET" init="5"/>,
+    <enummember name="SOCKDCCP" init="6"/>,
+    <enummember name="SOCKPACKET" init="10"/>,
+    <enummember name="SOCKCLOEXEC" init="524288"/>,
+    <enummember name="SOCKNONBLOCK" init="2048"/>
+  </enum>
+
+  <enum id="_282" name="">
+    <enummember name="MSGOOB" init="1"/>,
+    <enummember name="MSGPEEK" init="2"/>,
+    <enummember name="MSGDONTROUTE" init="4"/>,
+    <enummember name="MSGCTRUNC" init="8"/>,
+    <enummember name="MSGPROXY" init="16"/>,
+    <enummember name="MSGTRUNC" init="32"/>,
+    <enummember name="MSGDONTWAIT" init="64"/>,
+    <enummember name="MSGEOR" init="128"/>,
+    <enummember name="MSGWAITALL" init="256"/>,
+    <enummember name="MSGFIN" init="512"/>,
+    <enummember name="MSGSYN" init="1024"/>,
+    <enummember name="MSGCONFIRM" init="2048"/>,
+    <enummember name="MSGRST" init="4096"/>,
+    <enummember name="MSGERRQUEUE" init="8192"/>,
+    <enummember name="MSGNOSIGNAL" init="16384"/>,
+    <enummember name="MSGMORE" init="32768"/>,
+    <enummember name="MSGWAITFORONE" init="65536"/>,
+    <enummember name="MSGBATCH" init="262144"/>,
+    <enummember name="MSGZEROCOPY" init="67108864"/>,
+    <enummember name="MSGFASTOPEN" init="536870912"/>,
+    <enummember name="MSGCMSGCLOEXEC" init="1073741824"/>
+  </enum>
+
+  <enum id="_286" name="">
+    <enummember name="SCMRIGHTS" init="1"/>
+  </enum>
+
+  <enum id="_325" name="">
+    <enummember name="SHUTRD" init="0"/>,
+    <enummember name="SHUTWR" init="1"/>,
+    <enummember name="SHUTRDWR" init="2"/>
+  </enum>
+
+  <enum id="_350" name="">
+    <enummember name="IPPROTOIP" init="0"/>,
+    <enummember name="IPPROTOICMP" init="1"/>,
+    <enummember name="IPPROTOIGMP" init="2"/>,
+    <enummember name="IPPROTOIPIP" init="4"/>,
+    <enummember name="IPPROTOTCP" init="6"/>,
+    <enummember name="IPPROTOEGP" init="8"/>,
+    <enummember name="IPPROTOPUP" init="12"/>,
+    <enummember name="IPPROTOUDP" init="17"/>,
+    <enummember name="IPPROTOIDP" init="22"/>,
+    <enummember name="IPPROTOTP" init="29"/>,
+    <enummember name="IPPROTODCCP" init="33"/>,
+    <enummember name="IPPROTOIPV6" init="41"/>,
+    <enummember name="IPPROTORSVP" init="46"/>,
+    <enummember name="IPPROTOGRE" init="47"/>,
+    <enummember name="IPPROTOESP" init="50"/>,
+    <enummember name="IPPROTOAH" init="51"/>,
+    <enummember name="IPPROTOMTP" init="92"/>,
+    <enummember name="IPPROTOBEETPH" init="94"/>,
+    <enummember name="IPPROTOENCAP" init="98"/>,
+    <enummember name="IPPROTOPIM" init="103"/>,
+    <enummember name="IPPROTOCOMP" init="108"/>,
+    <enummember name="IPPROTOSCTP" init="132"/>,
+    <enummember name="IPPROTOUDPLITE" init="136"/>,
+    <enummember name="IPPROTOMPLS" init="137"/>,
+    <enummember name="IPPROTOETHERNET" init="143"/>,
+    <enummember name="IPPROTORAW" init="255"/>,
+    <enummember name="IPPROTOMPTCP" init="262"/>,
+    <enummember name="IPPROTOMAX" init="263"/>
+  </enum>
+
+  <enum id="_351" name="">
+    <enummember name="IPPROTOHOPOPTS" init="0"/>,
+    <enummember name="IPPROTOROUTING" init="43"/>,
+    <enummember name="IPPROTOFRAGMENT" init="44"/>,
+    <enummember name="IPPROTOICMPV6" init="58"/>,
+    <enummember name="IPPROTONONE" init="59"/>,
+    <enummember name="IPPROTODSTOPTS" init="60"/>,
+    <enummember name="IPPROTOMH" init="135"/>
+  </enum>
+
+  <enum id="_353" name="">
+    <enummember name="IPPORTECHO" init="7"/>,
+    <enummember name="IPPORTDISCARD" init="9"/>,
+    <enummember name="IPPORTSYSTAT" init="11"/>,
+    <enummember name="IPPORTDAYTIME" init="13"/>,
+    <enummember name="IPPORTNETSTAT" init="15"/>,
+    <enummember name="IPPORTFTP" init="21"/>,
+    <enummember name="IPPORTTELNET" init="23"/>,
+    <enummember name="IPPORTSMTP" init="25"/>,
+    <enummember name="IPPORTTIMESERVER" init="37"/>,
+    <enummember name="IPPORTNAMESERVER" init="42"/>,
+    <enummember name="IPPORTWHOIS" init="43"/>,
+    <enummember name="IPPORTMTP" init="57"/>,
+    <enummember name="IPPORTTFTP" init="69"/>,
+    <enummember name="IPPORTRJE" init="77"/>,
+    <enummember name="IPPORTFINGER" init="79"/>,
+    <enummember name="IPPORTTTYLINK" init="87"/>,
+    <enummember name="IPPORTSUPDUP" init="95"/>,
+    <enummember name="IPPORTEXECSERVER" init="512"/>,
+    <enummember name="IPPORTLOGINSERVER" init="513"/>,
+    <enummember name="IPPORTCMDSERVER" init="514"/>,
+    <enummember name="IPPORTEFSSERVER" init="520"/>,
+    <enummember name="IPPORTBIFFUDP" init="512"/>,
+    <enummember name="IPPORTWHOSERVER" init="513"/>,
+    <enummember name="IPPORTROUTESERVER" init="520"/>,
+    <enummember name="IPPORTRESERVED" init="1024"/>,
+    <enummember name="IPPORTUSERRESERVED" init="5000"/>
+  </enum>
+
+  <enum id="_443" name="Erlangcharencoding">
+    <enummember name="ERLANGASCII" init="1"/>,
+    <enummember name="ERLANGLATIN1" init="2"/>,
+    <enummember name="ERLANGUTF8" init="4"/>
+  </enum>
+
+  <enum id="_926" name="">
+    <enummember name="EIFUNCLOSURE" init="0"/>,
+    <enummember name="EIFUNEXPORT" init="1"/>
+  </enum>
+</enums>
+</castxml2pony>
+

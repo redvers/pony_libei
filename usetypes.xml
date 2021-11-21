@@ -1,0 +1,255 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    rvtype="Pointer[Pointer[U8]]"/>
+
+  <typedef name="Pointer[U8]"
+    ponytypein="Pointer[U8] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U8]"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]"/>
+
+  <typedef name="Pointer[U64]"
+    ponytypein="Pointer[U64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U64]"
+    structtype="Pointer[U64]"
+    structdef="Pointer[U64]"
+    argtype="Pointer[U64] tag"
+    rvtype="Pointer[U64]"/>
+
+  <typedef name="F64"
+    ponytypein="F64"
+    ponytypeinconv=""
+    ponytypeout="F64"
+    structtype="F64"
+    structdef="F64(0)"
+    argtype="F64"
+    rvtype="F64"/>
+
+  <typedef name="Pointer[None]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[ErlangPid]"
+    ponytypein="NullablePointer[ErlangPid] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[ErlangPid]"
+    structtype="NullablePointer[ErlangPid]"
+    structdef="NullablePointer[ErlangPid].none()"
+    argtype="NullablePointer[ErlangPid] tag"
+    rvtype="NullablePointer[ErlangPid]"/>
+
+  <typedef name="NullablePointer[EixbuffTAG]"
+    ponytypein="NullablePointer[EixbuffTAG] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[EixbuffTAG]"
+    structtype="NullablePointer[EixbuffTAG]"
+    structdef="NullablePointer[EixbuffTAG].none()"
+    argtype="NullablePointer[EixbuffTAG] tag"
+    rvtype="NullablePointer[EixbuffTAG]"/>
+
+  <typedef name="NullablePointer[ErlangMsg]"
+    ponytypein="NullablePointer[ErlangMsg] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[ErlangMsg]"
+    structtype="NullablePointer[ErlangMsg]"
+    structdef="NullablePointer[ErlangMsg].none()"
+    argtype="NullablePointer[ErlangMsg] tag"
+    rvtype="NullablePointer[ErlangMsg]"/>
+
+  <typedef name="I32"
+    ponytypein="I32"
+    ponytypeinconv=""
+    ponytypeout="I32"
+    structtype="I32"
+    structdef="I32(0)"
+    argtype="I32"
+    rvtype="I32"/>
+
+  <typedef name="Pointer[F64]"
+    ponytypein="Pointer[F64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[F64]"
+    structtype="Pointer[F64]"
+    structdef="Pointer[F64]"
+    argtype="Pointer[F64] tag"
+    rvtype="Pointer[F64]"/>
+
+  <typedef name="U32"
+    ponytypein="U32"
+    ponytypeinconv=""
+    ponytypeout="U32"
+    structtype="U32"
+    structdef="U32(0)"
+    argtype="U32"
+    rvtype="U32"/>
+
+  <typedef name="NullablePointer[Anon]"
+    ponytypein="NullablePointer[Anon] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Anon]"
+    structtype="NullablePointer[Anon]"
+    structdef="NullablePointer[Anon].none()"
+    argtype="NullablePointer[Anon] tag"
+    rvtype="NullablePointer[Anon]"/>
+
+  <typedef name="NullablePointer[ErlConnect]"
+    ponytypein="NullablePointer[ErlConnect] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[ErlConnect]"
+    structtype="NullablePointer[ErlConnect]"
+    structdef="NullablePointer[ErlConnect].none()"
+    argtype="NullablePointer[ErlConnect] tag"
+    rvtype="NullablePointer[ErlConnect]"/>
+
+  <typedef name="NullablePointer[Eicnodes]"
+    ponytypein="NullablePointer[Eicnodes] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Eicnodes]"
+    structtype="NullablePointer[Eicnodes]"
+    structdef="NullablePointer[Eicnodes].none()"
+    argtype="NullablePointer[Eicnodes] tag"
+    rvtype="NullablePointer[Eicnodes]"/>
+
+  <typedef name="Pointer[U32]"
+    ponytypein="Pointer[U32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U32]"
+    structtype="Pointer[U32]"
+    structdef="Pointer[U32]"
+    argtype="Pointer[U32] tag"
+    rvtype="Pointer[U32]"/>
+
+  <typedef name="Pointer[I64]"
+    ponytypein="Pointer[I64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[I64]"
+    structtype="Pointer[I64]"
+    structdef="Pointer[I64]"
+    argtype="Pointer[I64] tag"
+    rvtype="Pointer[I64]"/>
+
+  <typedef name="I64"
+    ponytypein="I64"
+    ponytypeinconv=""
+    ponytypeout="I64"
+    structtype="I64"
+    structdef="I64(0)"
+    argtype="I64"
+    rvtype="I64"/>
+
+  <typedef name="U64"
+    ponytypein="U64"
+    ponytypeinconv=""
+    ponytypeout="U64"
+    structtype="U64"
+    structdef="U64(0)"
+    argtype="U64"
+    rvtype="U64"/>
+
+  <typedef name="NullablePointer[Inaddr]"
+    ponytypein="NullablePointer[Inaddr] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Inaddr]"
+    structtype="NullablePointer[Inaddr]"
+    structdef="NullablePointer[Inaddr].none()"
+    argtype="NullablePointer[Inaddr] tag"
+    rvtype="NullablePointer[Inaddr]"/>
+
+  <typedef name="NullablePointer[Hostent]"
+    ponytypein="NullablePointer[Hostent] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Hostent]"
+    structtype="NullablePointer[Hostent]"
+    structdef="NullablePointer[Hostent].none()"
+    argtype="NullablePointer[Hostent] tag"
+    rvtype="NullablePointer[Hostent]"/>
+
+  <typedef name="I16"
+    ponytypein="I16"
+    ponytypeinconv=""
+    ponytypeout="I16"
+    structtype="I16"
+    structdef="I16(0)"
+    argtype="I16"
+    rvtype="I16"/>
+
+  <typedef name="NullablePointer[IOFILE]"
+    ponytypein="NullablePointer[IOFILE] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[IOFILE]"
+    structtype="NullablePointer[IOFILE]"
+    structdef="NullablePointer[IOFILE].none()"
+    argtype="NullablePointer[IOFILE] tag"
+    rvtype="NullablePointer[IOFILE]"/>
+
+  <typedef name="Pointer[I32]"
+    ponytypein="Pointer[I32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[I32]"
+    structtype="Pointer[I32]"
+    structdef="Pointer[I32]"
+    argtype="Pointer[I32] tag"
+    rvtype="Pointer[I32]"/>
+
+  <typedef name="U8"
+    ponytypein="U8"
+    ponytypeinconv=""
+    ponytypeout="U8"
+    structtype="U8"
+    structdef="U8(0)"
+    argtype="U8"
+    rvtype="U8"/>
+
+  <typedef name="..."
+    ponytypein="... tag"
+    ponytypeinconv=""
+    ponytypeout="..."
+    structtype="..."
+    structdef="..."
+    argtype="... tag"
+    rvtype="..."/>
+
+  <typedef name="None"
+    ponytypein="None tag"
+    ponytypeinconv=""
+    ponytypeout="None"
+    structtype="None"
+    structdef="None"
+    argtype="None tag"
+    rvtype="None"/>
+</typedefs>
+

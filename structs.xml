@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./types.xml"/>
+<xi:include href="./renderstructs.xml"/>
+<xi:include href="./ei.xml"/>
+                    <structs>
+                      <struct name="Anon" id="_41" size="64" align="32" fid="f1" lineno="155">
+    <field name="__val" id="_638" type="Pointer[I32]" fieldid="_806" offset="0" fid="f1" line="155"/>
+  </struct>
+
+  <struct name="Anon" id="_115" size="1024" align="64" fid="f11" lineno="5">
+    <field name="__val" id="_641" type="Pointer[U64]" fieldid="_1009" offset="0" fid="f11" line="7"/>
+  </struct>
+
+  <struct name="Timeval" id="_118" size="128" align="64" fid="f13" lineno="8">
+    <field name="tv_sec" id="_643" type="I64" fieldid="_47" offset="0" fid="f13" line="10"/>
+    <field name="tv_usec" id="_644" type="I64" fieldid="_49" offset="64" fid="f13" line="11"/>
+  </struct>
+
+  <struct name="Timespec" id="_119" size="128" align="64" fid="f14" lineno="10">
+    <field name="tv_sec" id="_645" type="I64" fieldid="_47" offset="0" fid="f14" line="12"/>
+    <field name="tv_nsec" id="_646" type="I64" fieldid="_64" offset="64" fid="f14" line="16"/>
+  </struct>
+
+  <struct name="Anon" id="_122" size="1024" align="64" fid="f15" lineno="59">
+    <field name="__fds_bits" id="_647" type="Pointer[I64]" fieldid="_1010" offset="0" fid="f15" line="67"/>
+  </struct>
+
+  <struct name="Pthreadinternallist" id="_131" size="128" align="64" fid="f16" lineno="49">
+    <field name="__prev" id="_653" type="NullablePointer[Pthreadinternallist]" fieldid="_1013" offset="0" fid="f16" line="51"/>
+    <field name="__next" id="_654" type="NullablePointer[Pthreadinternallist]" fieldid="_1013" offset="64" fid="f16" line="52"/>
+  </struct>
+
+  <struct name="Pthreadinternalslist" id="_133" size="64" align="64" fid="f16" lineno="55">
+    <field name="__next" id="_656" type="NullablePointer[Pthreadinternalslist]" fieldid="_1014" offset="0" fid="f16" line="57"/>
+  </struct>
+
+  <struct name="Pthreadmutexs" id="_135" size="320" align="64" fid="f17" lineno="22">
+    <field name="__lock" id="_658" type="I32" fieldid="_636" offset="0" fid="f17" line="24"/>
+    <field name="__count" id="_659" type="U32" fieldid="_632" offset="32" fid="f17" line="25"/>
+    <field name="__owner" id="_660" type="I32" fieldid="_636" offset="64" fid="f17" line="26"/>
+    <field name="__nusers" id="_661" type="U32" fieldid="_632" offset="96" fid="f17" line="28"/>
+    <field name="__kind" id="_662" type="I32" fieldid="_636" offset="128" fid="f17" line="32"/>
+    <field name="__spins" id="_663" type="I16" fieldid="_635" offset="160" fid="f17" line="34"/>
+    <field name="__elision" id="_664" type="I16" fieldid="_635" offset="176" fid="f17" line="35"/>
+    <field name="__list" id="_665" type="Pthreadinternallist" fieldid="_132" offset="192" fid="f17" line="36"/>
+  </struct>
+
+  <struct name="Pthreadrwlockarcht" id="_136" size="448" align="64" fid="f18" lineno="23">
+    <field name="__readers" id="_666" type="U32" fieldid="_632" offset="0" fid="f18" line="25"/>
+    <field name="__writers" id="_667" type="U32" fieldid="_632" offset="32" fid="f18" line="26"/>
+    <field name="__wrphase_futex" id="_668" type="U32" fieldid="_632" offset="64" fid="f18" line="27"/>
+    <field name="__writers_futex" id="_669" type="U32" fieldid="_632" offset="96" fid="f18" line="28"/>
+    <field name="__pad3" id="_670" type="U32" fieldid="_632" offset="128" fid="f18" line="29"/>
+    <field name="__pad4" id="_671" type="U32" fieldid="_632" offset="160" fid="f18" line="30"/>
+    <field name="__cur_writer" id="_672" type="I32" fieldid="_636" offset="192" fid="f18" line="32"/>
+    <field name="__shared" id="_673" type="I32" fieldid="_636" offset="224" fid="f18" line="33"/>
+    <field name="__rwelision" id="_674" type="I8" fieldid="_634" offset="256" fid="f18" line="34"/>
+    <field name="__pad1" id="_675" type="Pointer[U8]" fieldid="_1015" offset="264" fid="f18" line="39"/>
+    <field name="__pad2" id="_676" type="U64" fieldid="_633" offset="320" fid="f18" line="42"/>
+    <field name="__flags" id="_677" type="U32" fieldid="_632" offset="384" fid="f18" line="45"/>
+  </struct>
+
+  <struct name="Pthreadconds" id="_137" size="384" align="64" fid="f16" lineno="92">
+    <field name="" id="_679" type="None" fieldid="_678" offset="0" fid="f16" line="94"/>
+    <field name="" id="_683" type="None" fieldid="_682" offset="64" fid="f16" line="103"/>
+    <field name="__g_refs" id="_686" type="Pointer[U32]" fieldid="_1022" offset="128" fid="f16" line="112"/>
+    <field name="__g_size" id="_687" type="Pointer[U32]" fieldid="_1022" offset="192" fid="f16" line="113"/>
+    <field name="__g1_orig_size" id="_688" type="U32" fieldid="_632" offset="256" fid="f16" line="114"/>
+    <field name="__wrefs" id="_689" type="U32" fieldid="_632" offset="288" fid="f16" line="115"/>
+    <field name="__g_signals" id="_690" type="Pointer[U32]" fieldid="_1022" offset="320" fid="f16" line="116"/>
+  </struct>
+
+  <struct name="Anon" id="_140" size="32" align="32" fid="f16" lineno="122">
+    <field name="__data" id="_691" type="I32" fieldid="_636" offset="0" fid="f16" line="124"/>
+  </struct>
+
+  <struct name="Anon" id="_166" size="64" align="32" fid="f21" lineno="13">
+    <field name="__count" id="_723" type="I32" fieldid="_636" offset="0" fid="f21" line="15"/>
+    <field name="__value" id="_725" type="None" fieldid="_1034" offset="32" fid="f21" line="20"/>
+  </struct>
+
+  <struct name="Gfpost" id="_168" size="128" align="64" fid="f22" lineno="10">
+    <field name="__pos" id="_727" type="I64" fieldid="_38" offset="0" fid="f22" line="12"/>
+    <field name="__state" id="_728" type="Anon" fieldid="_167" offset="64" fid="f22" line="13"/>
+  </struct>
+
+  <struct name="Gfpos64t" id="_170" size="128" align="64" fid="f23" lineno="10">
+    <field name="__pos" id="_730" type="I64" fieldid="_39" offset="0" fid="f23" line="12"/>
+    <field name="__state" id="_731" type="Anon" fieldid="_167" offset="64" fid="f23" line="13"/>
+  </struct>
+
+  <struct name="IOFILE" id="_172" size="1728" align="64" fid="f24" lineno="49">
+    <field name="_flags" id="_733" type="I32" fieldid="_636" offset="0" fid="f24" line="51"/>
+    <field name="_IO_read_ptr" id="_734" type="String" fieldid="_628" offset="64" fid="f24" line="54"/>
+    <field name="_IO_read_end" id="_735" type="String" fieldid="_628" offset="128" fid="f24" line="55"/>
+    <field name="_IO_read_base" id="_736" type="String" fieldid="_628" offset="192" fid="f24" line="56"/>
+    <field name="_IO_write_base" id="_737" type="String" fieldid="_628" offset="256" fid="f24" line="57"/>
+    <field name="_IO_write_ptr" id="_738" type="String" fieldid="_628" offset="320" fid="f24" line="58"/>
+    <field name="_IO_write_end" id="_739" type="String" fieldid="_628" offset="384" fid="f24" line="59"/>
+    <field name="_IO_buf_base" id="_740" type="String" fieldid="_628" offset="448" fid="f24" line="60"/>
+    <field name="_IO_buf_end" id="_741" type="String" fieldid="_628" offset="512" fid="f24" line="61"/>
+    <field name="_IO_save_base" id="_742" type="String" fieldid="_628" offset="576" fid="f24" line="64"/>
+    <field name="_IO_backup_base" id="_743" type="String" fieldid="_628" offset="640" fid="f24" line="65"/>
+    <field name="_IO_save_end" id="_744" type="String" fieldid="_628" offset="704" fid="f24" line="66"/>
+    <field name="_markers" id="_745" type="NullablePointer[IOmarker]" fieldid="_1035" offset="768" fid="f24" line="68"/>
+    <field name="_chain" id="_746" type="NullablePointer[IOFILE]" fieldid="_1036" offset="832" fid="f24" line="70"/>
+    <field name="_fileno" id="_747" type="I32" fieldid="_636" offset="896" fid="f24" line="72"/>
+    <field name="_flags2" id="_748" type="I32" fieldid="_636" offset="928" fid="f24" line="73"/>
+    <field name="_old_offset" id="_749" type="I64" fieldid="_38" offset="960" fid="f24" line="74"/>
+    <field name="_cur_column" id="_750" type="U16" fieldid="_631" offset="1024" fid="f24" line="77"/>
+    <field name="_vtable_offset" id="_751" type="I8" fieldid="_634" offset="1040" fid="f24" line="78"/>
+    <field name="_shortbuf" id="_752" type="Pointer[U8]" fieldid="_1037" offset="1048" fid="f24" line="79"/>
+    <field name="_lock" id="_753" type="Pointer[None]" fieldid="_1038" offset="1088" fid="f24" line="81"/>
+    <field name="_offset" id="_754" type="I64" fieldid="_39" offset="1152" fid="f24" line="89"/>
+    <field name="_codecvt" id="_755" type="NullablePointer[IOcodecvt]" fieldid="_1039" offset="1216" fid="f24" line="91"/>
+    <field name="_wide_data" id="_756" type="NullablePointer[IOwidedata]" fieldid="_1040" offset="1280" fid="f24" line="92"/>
+    <field name="_freeres_list" id="_757" type="NullablePointer[IOFILE]" fieldid="_1036" offset="1344" fid="f24" line="93"/>
+    <field name="_freeres_buf" id="_758" type="Pointer[None]" fieldid="_640" offset="1408" fid="f24" line="94"/>
+    <field name="__pad5" id="_759" type="U64" fieldid="_96" offset="1472" fid="f24" line="95"/>
+    <field name="_mode" id="_760" type="I32" fieldid="_636" offset="1536" fid="f24" line="96"/>
+    <field name="_unused2" id="_761" type="Pointer[U8]" fieldid="_1041" offset="1568" fid="f24" line="98"/>
+  </struct>
+
+  <struct name="IOmarker" id="_175" size="" align="" fid="f24" lineno="36">
+
+  </struct>
+
+  <struct name="IOcodecvt" id="_176" size="" align="" fid="f24" lineno="37">
+
+  </struct>
+
+  <struct name="IOwidedata" id="_177" size="" align="" fid="f24" lineno="38">
+
+  </struct>
+
+  <struct name="Iovec" id="_276" size="128" align="64" fid="f31" lineno="26">
+    <field name="iov_base" id="_776" type="Pointer[None]" fieldid="_640" offset="0" fid="f31" line="28"/>
+    <field name="iov_len" id="_777" type="U64" fieldid="_96" offset="64" fid="f31" line="29"/>
+  </struct>
+
+  <struct name="Sockaddr" id="_280" size="128" align="16" fid="f32" lineno="178">
+    <field name="sa_family" id="_778" type="U16" fieldid="_279" offset="0" fid="f32" line="180"/>
+    <field name="sa_data" id="_779" type="Pointer[U8]" fieldid="_1042" offset="16" fid="f32" line="181"/>
+  </struct>
+
+  <struct name="Sockaddrstorage" id="_281" size="1024" align="64" fid="f32" lineno="191">
+    <field name="ss_family" id="_780" type="U16" fieldid="_279" offset="0" fid="f32" line="193"/>
+    <field name="__ss_padding" id="_781" type="Pointer[U8]" fieldid="_1043" offset="16" fid="f32" line="194"/>
+    <field name="__ss_align" id="_782" type="U64" fieldid="_633" offset="960" fid="f32" line="195"/>
+  </struct>
+
+  <struct name="Msghdr" id="_283" size="448" align="64" fid="f32" lineno="257">
+    <field name="msg_name" id="_783" type="Pointer[None]" fieldid="_640" offset="0" fid="f32" line="259"/>
+    <field name="msg_namelen" id="_784" type="U32" fieldid="_277" offset="64" fid="f32" line="260"/>
+    <field name="msg_iov" id="_785" type="NullablePointer[Iovec]" fieldid="_1044" offset="128" fid="f32" line="262"/>
+    <field name="msg_iovlen" id="_786" type="U64" fieldid="_96" offset="192" fid="f32" line="263"/>
+    <field name="msg_control" id="_787" type="Pointer[None]" fieldid="_640" offset="256" fid="f32" line="265"/>
+    <field name="msg_controllen" id="_788" type="U64" fieldid="_96" offset="320" fid="f32" line="266"/>
+    <field name="msg_flags" id="_789" type="I32" fieldid="_636" offset="384" fid="f32" line="271"/>
+  </struct>
+
+  <struct name="Cmsghdr" id="_284" size="128" align="64" fid="f32" lineno="275">
+    <field name="cmsg_len" id="_790" type="U64" fieldid="_96" offset="0" fid="f32" line="277"/>
+    <field name="cmsg_level" id="_791" type="I32" fieldid="_636" offset="64" fid="f32" line="282"/>
+    <field name="cmsg_type" id="_792" type="I32" fieldid="_636" offset="96" fid="f32" line="283"/>
+    <field name="__cmsg_data" id="_793" type="Pointer[U8]" fieldid="_1045" offset="128" fid="f32" line="285"/>
+  </struct>
+
+  <struct name="Anon" id="_287" size="1024" align="64" fid="f35" lineno="25">
+    <field name="fds_bits" id="_796" type="Pointer[U64]" fieldid="_1009" offset="0" fid="f35" line="26"/>
+  </struct>
+
+  <struct name="Anon" id="_310" size="64" align="32" fid="f37" lineno="79">
+    <field name="val" id="_799" type="Pointer[I32]" fieldid="_806" offset="0" fid="f37" line="80"/>
+  </struct>
+
+  <struct name="Linger" id="_323" size="64" align="32" fid="f32" lineno="361">
+    <field name="l_onoff" id="_802" type="I32" fieldid="_636" offset="0" fid="f32" line="363"/>
+    <field name="l_linger" id="_803" type="I32" fieldid="_636" offset="32" fid="f32" line="364"/>
+  </struct>
+
+  <struct name="Osockaddr" id="_324" size="128" align="16" fid="f38" lineno="6">
+    <field name="sa_family" id="_804" type="U16" fieldid="_631" offset="0" fid="f38" line="8"/>
+    <field name="sa_data" id="_805" type="Pointer[U8]" fieldid="_1049" offset="16" fid="f38" line="9"/>
+  </struct>
+
+  <struct name="Inaddr" id="_346" size="32" align="32" fid="f40" lineno="31">
+    <field name="s_addr" id="_811" type="U32" fieldid="_345" offset="0" fid="f40" line="33"/>
+  </struct>
+
+  <struct name="Ipopts" id="_347" size="352" align="32" fid="f41" lineno="143">
+    <field name="ip_dst" id="_812" type="Inaddr" fieldid="_1051" offset="0" fid="f41" line="145"/>
+    <field name="ip_opts" id="_813" type="Pointer[U8]" fieldid="_1026" offset="32" fid="f41" line="146"/>
+  </struct>
+
+  <struct name="Ipmreqn" id="_348" size="96" align="32" fid="f41" lineno="150">
+    <field name="imr_multiaddr" id="_814" type="Inaddr" fieldid="_1051" offset="0" fid="f41" line="152"/>
+    <field name="imr_address" id="_815" type="Inaddr" fieldid="_1051" offset="32" fid="f41" line="153"/>
+    <field name="imr_ifindex" id="_816" type="I32" fieldid="_636" offset="64" fid="f41" line="154"/>
+  </struct>
+
+  <struct name="Inpktinfo" id="_349" size="96" align="32" fid="f41" lineno="158">
+    <field name="ipi_ifindex" id="_817" type="I32" fieldid="_636" offset="0" fid="f41" line="160"/>
+    <field name="ipi_spec_dst" id="_818" type="Inaddr" fieldid="_1051" offset="32" fid="f41" line="161"/>
+    <field name="ipi_addr" id="_819" type="Inaddr" fieldid="_1051" offset="64" fid="f41" line="162"/>
+  </struct>
+
+  <struct name="In6addr" id="_354" size="128" align="32" fid="f40" lineno="216">
+    <field name="__in6_u" id="_821" type="None" fieldid="_1055" offset="0" fid="f40" line="223"/>
+  </struct>
+
+  <struct name="Sockaddrin" id="_357" size="128" align="32" fid="f40" lineno="242">
+    <field name="sin_family" id="_823" type="U16" fieldid="_279" offset="0" fid="f40" line="244"/>
+    <field name="sin_port" id="_824" type="U16" fieldid="_352" offset="16" fid="f40" line="245"/>
+    <field name="sin_addr" id="_825" type="Inaddr" fieldid="_1051" offset="32" fid="f40" line="246"/>
+    <field name="sin_zero" id="_826" type="Pointer[U8]" fieldid="_1056" offset="64" fid="f40" line="249"/>
+  </struct>
+
+  <struct name="Sockaddrin6" id="_358" size="224" align="32" fid="f40" lineno="257">
+    <field name="sin6_family" id="_827" type="U16" fieldid="_279" offset="0" fid="f40" line="259"/>
+    <field name="sin6_port" id="_828" type="U16" fieldid="_352" offset="16" fid="f40" line="260"/>
+    <field name="sin6_flowinfo" id="_829" type="U32" fieldid="_274" offset="32" fid="f40" line="261"/>
+    <field name="sin6_addr" id="_830" type="In6addr" fieldid="_822" offset="64" fid="f40" line="262"/>
+    <field name="sin6_scope_id" id="_831" type="U32" fieldid="_274" offset="192" fid="f40" line="263"/>
+  </struct>
+
+  <struct name="Ipmreq" id="_359" size="64" align="32" fid="f40" lineno="269">
+    <field name="imr_multiaddr" id="_832" type="Inaddr" fieldid="_1051" offset="0" fid="f40" line="272"/>
+    <field name="imr_interface" id="_833" type="Inaddr" fieldid="_1051" offset="32" fid="f40" line="275"/>
+  </struct>
+
+  <struct name="Ipmreqsource" id="_360" size="96" align="32" fid="f40" lineno="278">
+    <field name="imr_multiaddr" id="_834" type="Inaddr" fieldid="_1051" offset="0" fid="f40" line="281"/>
+    <field name="imr_interface" id="_835" type="Inaddr" fieldid="_1051" offset="32" fid="f40" line="284"/>
+    <field name="imr_sourceaddr" id="_836" type="Inaddr" fieldid="_1051" offset="64" fid="f40" line="287"/>
+  </struct>
+
+  <struct name="Ipv6mreq" id="_361" size="160" align="32" fid="f40" lineno="293">
+    <field name="ipv6mr_multiaddr" id="_837" type="In6addr" fieldid="_822" offset="0" fid="f40" line="296"/>
+    <field name="ipv6mr_interface" id="_838" type="U32" fieldid="_632" offset="128" fid="f40" line="299"/>
+  </struct>
+
+  <struct name="Groupreq" id="_362" size="1088" align="64" fid="f40" lineno="305">
+    <field name="gr_interface" id="_839" type="U32" fieldid="_274" offset="0" fid="f40" line="308"/>
+    <field name="gr_group" id="_840" type="Sockaddrstorage" fieldid="_1057" offset="64" fid="f40" line="311"/>
+  </struct>
+
+  <struct name="Groupsourcereq" id="_363" size="2112" align="64" fid="f40" lineno="314">
+    <field name="gsr_interface" id="_841" type="U32" fieldid="_274" offset="0" fid="f40" line="317"/>
+    <field name="gsr_group" id="_842" type="Sockaddrstorage" fieldid="_1057" offset="64" fid="f40" line="320"/>
+    <field name="gsr_source" id="_843" type="Sockaddrstorage" fieldid="_1057" offset="1088" fid="f40" line="323"/>
+  </struct>
+
+  <struct name="Ipmsfilter" id="_364" size="160" align="32" fid="f40" lineno="328">
+    <field name="imsf_multiaddr" id="_844" type="Inaddr" fieldid="_1051" offset="0" fid="f40" line="331"/>
+    <field name="imsf_interface" id="_845" type="Inaddr" fieldid="_1051" offset="32" fid="f40" line="334"/>
+    <field name="imsf_fmode" id="_846" type="U32" fieldid="_274" offset="64" fid="f40" line="337"/>
+    <field name="imsf_numsrc" id="_847" type="U32" fieldid="_274" offset="96" fid="f40" line="340"/>
+    <field name="imsf_slist" id="_848" type="Pointer[Inaddr]" fieldid="_1058" offset="128" fid="f40" line="342"/>
+  </struct>
+
+  <struct name="Groupfilter" id="_365" size="2176" align="64" fid="f40" lineno="349">
+    <field name="gf_interface" id="_849" type="U32" fieldid="_274" offset="0" fid="f40" line="352"/>
+    <field name="gf_group" id="_850" type="Sockaddrstorage" fieldid="_1057" offset="64" fid="f40" line="355"/>
+    <field name="gf_fmode" id="_851" type="U32" fieldid="_274" offset="1088" fid="f40" line="358"/>
+    <field name="gf_numsrc" id="_852" type="U32" fieldid="_274" offset="1120" fid="f40" line="361"/>
+    <field name="gf_slist" id="_853" type="Pointer[Sockaddrstorage]" fieldid="_1059" offset="1152" fid="f40" line="363"/>
+  </struct>
+
+  <struct name="Rpcent" id="_372" size="192" align="64" fid="f42" lineno="46">
+    <field name="r_name" id="_856" type="String" fieldid="_628" offset="0" fid="f42" line="48"/>
+    <field name="r_aliases" id="_857" type="Array[String]" fieldid="_766" offset="64" fid="f42" line="49"/>
+    <field name="r_number" id="_858" type="I32" fieldid="_636" offset="128" fid="f42" line="50"/>
+  </struct>
+
+  <struct name="Netent" id="_381" size="192" align="64" fid="f43" lineno="26">
+    <field name="n_name" id="_861" type="String" fieldid="_628" offset="0" fid="f43" line="28"/>
+    <field name="n_aliases" id="_862" type="Array[String]" fieldid="_766" offset="64" fid="f43" line="29"/>
+    <field name="n_addrtype" id="_863" type="I32" fieldid="_636" offset="128" fid="f43" line="30"/>
+    <field name="n_net" id="_864" type="U32" fieldid="_274" offset="160" fid="f43" line="31"/>
+  </struct>
+
+  <struct name="Hostent" id="_385" size="256" align="64" fid="f44" lineno="98">
+    <field name="h_name" id="_865" type="String" fieldid="_628" offset="0" fid="f44" line="100"/>
+    <field name="h_aliases" id="_866" type="Array[String]" fieldid="_766" offset="64" fid="f44" line="101"/>
+    <field name="h_addrtype" id="_867" type="I32" fieldid="_636" offset="128" fid="f44" line="102"/>
+    <field name="h_length" id="_868" type="I32" fieldid="_636" offset="160" fid="f44" line="103"/>
+    <field name="h_addr_list" id="_869" type="Array[String]" fieldid="_766" offset="192" fid="f44" line="104"/>
+  </struct>
+
+  <struct name="Servent" id="_404" size="256" align="64" fid="f44" lineno="255">
+    <field name="s_name" id="_874" type="String" fieldid="_628" offset="0" fid="f44" line="257"/>
+    <field name="s_aliases" id="_875" type="Array[String]" fieldid="_766" offset="64" fid="f44" line="258"/>
+    <field name="s_port" id="_876" type="I32" fieldid="_636" offset="128" fid="f44" line="259"/>
+    <field name="s_proto" id="_877" type="String" fieldid="_628" offset="192" fid="f44" line="260"/>
+  </struct>
+
+  <struct name="Protoent" id="_413" size="192" align="64" fid="f44" lineno="324">
+    <field name="p_name" id="_880" type="String" fieldid="_628" offset="0" fid="f44" line="326"/>
+    <field name="p_aliases" id="_881" type="Array[String]" fieldid="_766" offset="64" fid="f44" line="327"/>
+    <field name="p_proto" id="_882" type="I32" fieldid="_636" offset="128" fid="f44" line="328"/>
+  </struct>
+
+  <struct name="Addrinfo" id="_437" size="384" align="64" fid="f44" lineno="565">
+    <field name="ai_flags" id="_885" type="I32" fieldid="_636" offset="0" fid="f44" line="567"/>
+    <field name="ai_family" id="_886" type="I32" fieldid="_636" offset="32" fid="f44" line="568"/>
+    <field name="ai_socktype" id="_887" type="I32" fieldid="_636" offset="64" fid="f44" line="569"/>
+    <field name="ai_protocol" id="_888" type="I32" fieldid="_636" offset="96" fid="f44" line="570"/>
+    <field name="ai_addrlen" id="_889" type="U32" fieldid="_277" offset="128" fid="f44" line="571"/>
+    <field name="ai_addr" id="_890" type="NullablePointer[Sockaddr]" fieldid="_808" offset="192" fid="f44" line="572"/>
+    <field name="ai_canonname" id="_891" type="String" fieldid="_628" offset="256" fid="f44" line="573"/>
+    <field name="ai_next" id="_892" type="NullablePointer[Addrinfo]" fieldid="_895" offset="320" fid="f44" line="574"/>
+  </struct>
+
+  <struct name="ErlangPid" id="_445" size="8288" align="32" fid="f45" lineno="240">
+    <field name="node" id="_897" type="Pointer[U8]" fieldid="_1068" offset="0" fid="f45" line="241"/>
+    <field name="num" id="_898" type="U32" fieldid="_632" offset="8192" fid="f45" line="242"/>
+    <field name="serial" id="_899" type="U32" fieldid="_632" offset="8224" fid="f45" line="243"/>
+    <field name="creation" id="_900" type="U32" fieldid="_632" offset="8256" fid="f45" line="244"/>
+  </struct>
+
+  <struct name="ErlangPort" id="_447" size="8320" align="64" fid="f45" lineno="248">
+    <field name="node" id="_902" type="Pointer[U8]" fieldid="_1068" offset="0" fid="f45" line="249"/>
+    <field name="id" id="_903" type="U64" fieldid="_1002" offset="8192" fid="f45" line="250"/>
+    <field name="creation" id="_904" type="U32" fieldid="_632" offset="8256" fid="f45" line="251"/>
+  </struct>
+
+  <struct name="ErlangRef" id="_449" size="8416" align="32" fid="f45" lineno="255">
+    <field name="node" id="_906" type="Pointer[U8]" fieldid="_1068" offset="0" fid="f45" line="256"/>
+    <field name="len" id="_907" type="I32" fieldid="_636" offset="8192" fid="f45" line="257"/>
+    <field name="n" id="_908" type="Pointer[U32]" fieldid="_1069" offset="8224" fid="f45" line="258"/>
+    <field name="creation" id="_909" type="U32" fieldid="_632" offset="8384" fid="f45" line="259"/>
+  </struct>
+
+  <struct name="ErlangTrace" id="_451" size="8576" align="64" fid="f45" lineno="263">
+    <field name="serial" id="_911" type="I64" fieldid="_637" offset="0" fid="f45" line="264"/>
+    <field name="prev" id="_912" type="I64" fieldid="_637" offset="64" fid="f45" line="265"/>
+    <field name="from" id="_913" type="Anon" fieldid="_446" offset="128" fid="f45" line="266"/>
+    <field name="label" id="_914" type="I64" fieldid="_637" offset="8448" fid="f45" line="267"/>
+    <field name="flags" id="_915" type="I64" fieldid="_637" offset="8512" fid="f45" line="268"/>
+  </struct>
+
+  <struct name="ErlangMessage" id="_453" size="41600" align="64" fid="f45" lineno="272">
+    <field name="msgtype" id="_917" type="I64" fieldid="_637" offset="0" fid="f45" line="273"/>
+    <field name="from" id="_918" type="Anon" fieldid="_446" offset="64" fid="f45" line="274"/>
+    <field name="to" id="_919" type="Anon" fieldid="_446" offset="8352" fid="f45" line="275"/>
+    <field name="toname" id="_920" type="Pointer[U8]" fieldid="_1068" offset="16640" fid="f45" line="276"/>
+    <field name="cookie" id="_921" type="Pointer[U8]" fieldid="_1068" offset="24808" fid="f45" line="277"/>
+    <field name="token" id="_922" type="Anon" fieldid="_452" offset="33024" fid="f45" line="278"/>
+  </struct>
+
+  <struct name="ErlangFunction" id="_455" size="17152" align="64" fid="f45" lineno="282">
+    <field name="arity" id="_924" type="I64" fieldid="_637" offset="0" fid="f45" line="283"/>
+    <field name="module" id="_925" type="Pointer[U8]" fieldid="_1068" offset="64" fid="f45" line="284"/>
+    <field name="ptype" id="_927" type="I32" fieldid="_1070" offset="8256" fid="f45" line="285"/>
+    <field name="u" id="_929" type="None" fieldid="_1075" offset="8320" fid="f45" line="301"/>
+  </struct>
+
+  <struct name="ErlangBig" id="_457" size="128" align="64" fid="f45" lineno="305">
+    <field name="arity" id="_931" type="U32" fieldid="_632" offset="0" fid="f45" line="306"/>
+    <field name="is_neg" id="_932" type="I32" fieldid="_636" offset="32" fid="f45" line="307"/>
+    <field name="digits" id="_933" type="Pointer[None]" fieldid="_640" offset="64" fid="f45" line="308"/>
+  </struct>
+
+  <struct name="EiTerm" id="_459" size="8576" align="64" fid="f45" lineno="311">
+    <field name="ei_type" id="_935" type="U8" fieldid="_982" offset="0" fid="f45" line="312"/>
+    <field name="arity" id="_936" type="I32" fieldid="_636" offset="32" fid="f45" line="313"/>
+    <field name="size" id="_937" type="I32" fieldid="_636" offset="64" fid="f45" line="314"/>
+    <field name="value" id="_939" type="None" fieldid="_1082" offset="128" fid="f45" line="322"/>
+  </struct>
+
+  <struct name="ErlConnect" id="_461" size="2088" align="8" fid="f45" lineno="327">
+    <field name="ipadr" id="_941" type="Pointer[U8]" fieldid="_1023" offset="0" fid="f45" line="328"/>
+    <field name="nodename" id="_942" type="Pointer[U8]" fieldid="_1083" offset="32" fid="f45" line="329"/>
+  </struct>
+
+  <struct name="EiSocketCallbacks" id="_463" size="832" align="64" fid="f45" lineno="347">
+    <field name="flags" id="_944" type="I32" fieldid="_636" offset="0" fid="f45" line="348"/>
+    <field name="socket" id="_945" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1084" offset="64" fid="f45" line="350"/>
+    <field name="close" id="_946" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1085" offset="128" fid="f45" line="351"/>
+    <field name="listen" id="_947" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1086" offset="192" fid="f45" line="352"/>
+    <field name="accept" id="_948" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1087" offset="256" fid="f45" line="353"/>
+    <field name="connect" id="_949" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1088" offset="320" fid="f45" line="354"/>
+    <field name="writev" id="_950" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1089" offset="384" fid="f45" line="355"/>
+    <field name="write" id="_951" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1090" offset="448" fid="f45" line="356"/>
+    <field name="read" id="_952" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1091" offset="512" fid="f45" line="357"/>
+    <field name="handshake_packet_header_size" id="_953" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1092" offset="576" fid="f45" line="359"/>
+    <field name="connect_handshake_complete" id="_954" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1085" offset="640" fid="f45" line="360"/>
+    <field name="accept_handshake_complete" id="_955" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1085" offset="704" fid="f45" line="361"/>
+    <field name="get_fd" id="_956" type="NullablePointer[FUNCTIONTYPE]" fieldid="_1092" offset="768" fid="f45" line="362"/>
+  </struct>
+
+  <struct name="Eicnodes" id="_465" size="18752" align="64" fid="f45" lineno="368">
+    <field name="thishostname" id="_958" type="Pointer[U8]" fieldid="_1093" offset="0" fid="f45" line="369"/>
+    <field name="thisnodename" id="_959" type="Pointer[U8]" fieldid="_1083" offset="2040" fid="f45" line="370"/>
+    <field name="thisalivename" id="_960" type="Pointer[U8]" fieldid="_1093" offset="4096" fid="f45" line="371"/>
+    <field name="ei_connect_cookie" id="_961" type="Pointer[U8]" fieldid="_1094" offset="6136" fid="f45" line="374"/>
+    <field name="creation" id="_962" type="U32" fieldid="_632" offset="10240" fid="f45" line="375"/>
+    <field name="self" id="_963" type="Anon" fieldid="_446" offset="10272" fid="f45" line="376"/>
+    <field name="cbs" id="_964" type="NullablePointer[Anon]" fieldid="_974" offset="18560" fid="f45" line="377"/>
+    <field name="setup_context" id="_965" type="Pointer[None]" fieldid="_640" offset="18624" fid="f45" line="378"/>
+    <field name="pidsn" id="_966" type="U32" fieldid="_632" offset="18688" fid="f45" line="379"/>
+  </struct>
+
+  <struct name="EixbuffTAG" id="_468" size="128" align="64" fid="f45" lineno="387">
+    <field name="buff" id="_969" type="String" fieldid="_628" offset="0" fid="f45" line="388"/>
+    <field name="buffsz" id="_970" type="I32" fieldid="_636" offset="64" fid="f45" line="389"/>
+    <field name="index" id="_971" type="I32" fieldid="_636" offset="96" fid="f45" line="390"/>
+  </struct>
+
+  <struct name="NSConstantStringtag" id="_627" size="256" align="64" fid="f0" lineno="0">
+    <field name="isa" id="_1004" type="Pointer[I32]" fieldid="_988" offset="0" fid="" line=""/>
+    <field name="flags" id="_1005" type="I32" fieldid="_636" offset="64" fid="" line=""/>
+    <field name="str" id="_1006" type="String" fieldid="_765" offset="128" fid="" line=""/>
+    <field name="length" id="_1007" type="I64" fieldid="_637" offset="192" fid="" line=""/>
+  </struct>
+
+  <struct name="Valisttag" id="_1008" size="192" align="64" fid="f0" lineno="0">
+    <field name="gp_offset" id="_1095" type="U32" fieldid="_632" offset="0" fid="" line=""/>
+    <field name="fp_offset" id="_1096" type="U32" fieldid="_632" offset="32" fid="" line=""/>
+    <field name="overflow_arg_area" id="_1097" type="Pointer[None]" fieldid="_640" offset="64" fid="" line=""/>
+    <field name="reg_save_area" id="_1098" type="Pointer[None]" fieldid="_640" offset="128" fid="" line=""/>
+  </struct>
+
+  <struct name="Anon" id="_1017" size="64" align="32" fid="f16" lineno="97">
+    <field name="__low" id="_1101" type="U32" fieldid="_632" offset="0" fid="f16" line="99"/>
+    <field name="__high" id="_1102" type="U32" fieldid="_632" offset="32" fid="f16" line="100"/>
+  </struct>
+
+  <struct name="Anon" id="_1020" size="64" align="32" fid="f16" lineno="106">
+    <field name="__low" id="_1104" type="U32" fieldid="_632" offset="0" fid="f16" line="108"/>
+    <field name="__high" id="_1105" type="U32" fieldid="_632" offset="32" fid="f16" line="109"/>
+  </struct>
+
+  <struct name="ErlangFunUnionA" id="_1071" size="8832" align="64" fid="f45" lineno="287">
+    <field name="md5" id="_1114" type="Pointer[U8]" fieldid="_1135" offset="0" fid="f45" line="288"/>
+    <field name="index" id="_1115" type="I64" fieldid="_637" offset="128" fid="f45" line="289"/>
+    <field name="old_index" id="_1116" type="I64" fieldid="_637" offset="192" fid="f45" line="290"/>
+    <field name="uniq" id="_1117" type="I64" fieldid="_637" offset="256" fid="f45" line="291"/>
+    <field name="n_free_vars" id="_1118" type="I64" fieldid="_637" offset="320" fid="f45" line="292"/>
+    <field name="pid" id="_1119" type="Anon" fieldid="_446" offset="384" fid="f45" line="293"/>
+    <field name="free_var_len" id="_1120" type="I64" fieldid="_637" offset="8704" fid="f45" line="294"/>
+    <field name="free_vars" id="_1121" type="String" fieldid="_628" offset="8768" fid="f45" line="295"/>
+  </struct>
+
+  <struct name="ErlangFunUnionB" id="_1073" size="128" align="64" fid="f45" lineno="297">
+    <field name="func" id="_1123" type="String" fieldid="_628" offset="0" fid="f45" line="298"/>
+    <field name="func_allocated" id="_1124" type="I32" fieldid="_636" offset="64" fid="f45" line="299"/>
+  </struct>
+</structs>
+</castxml2pony>
+
