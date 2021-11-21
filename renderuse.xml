@@ -116,7 +116,7 @@
   <renderuse id="_584" render="0"/><!-- ei_decode_iodata -->
   <renderuse id="_585" render="1"/><!-- ei_decode_ei_term -->
   <renderuse id="_586" render="1"/><!-- ei_print_term -->
-  <renderuse id="_587" render="0"/><!-- ei_s_print_term -->
+  <renderuse id="_587" render="1"/><!-- ei_s_print_term -->
   <renderuse id="_588" render="0"/><!-- ei_x_format -->
   <renderuse id="_589" render="0"/><!-- ei_x_format_wo_ver -->
   <renderuse id="_590" render="1"/><!-- ei_x_new -->

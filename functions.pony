@@ -1987,10 +1987,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-/*
-  fun ei_s_print_term(s: Array[String], buf: String, index: Pointer[I32] tag): I32 =>
-    @ei_s_print_term(s, buf.cstring(), index)
-*/
+  fun ei_s_print_term(s: U8PtrPtr, buf: Pointer[U8] tag, index: I32Ptr): I32 =>
+    @ei_s_print_term(s, buf, index)
 
 
 /*

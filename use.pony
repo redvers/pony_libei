@@ -345,6 +345,21 @@ use @ei_print_term[I32](fp: NullablePointer[IOFILE] tag, buf: Pointer[U8] tag, i
 
 
 /*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:602
+  Original Name: ei_s_print_term/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:602
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(int) size=32]
+*/
+use @ei_s_print_term[I32](s: U8PtrPtr, buf: Pointer[U8] tag, index: I32Ptr)
+
+
+
+/*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:611
   Original Name: ei_x_new/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:611
 

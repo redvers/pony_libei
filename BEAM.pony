@@ -79,7 +79,7 @@ actor BEAM
 
     wait_for_msg()
 
-  fun process_msg(buff: EixbuffTAG) =>
+  fun process_msg(buff: EixbuffTAG val) =>
     @printf("MESSAGE\n".cstring())
 
     let t: EiTerm = EiTerm
@@ -88,11 +88,21 @@ actor BEAM
     var res: I32 = Ei.ei_decode_version(buff.buff, indexptr, versionptr)
     @printf("[0 - %d]:%d version: %d\n".cstring(), indexptr.num, buff.index, versionptr.num)
 
+    let etype: ErlTerm = buff.get_type(indexptr)
+    @printf("[%d]:%d\n".cstring(), indexptr.num, buff.index)
+
+    etype.render(buff.buff, indexptr.num)
+
+
+
+
+/*
     let typeptr: I32Ptr = I32Ptr
     let sizeptr: I32Ptr = I32Ptr
     let indexloc: I32 = indexptr.num
     res = Ei.ei_get_type(buff.buff, indexptr, typeptr, sizeptr)
     @printf("[%d - %d]:%d type: %d size: %d\n".cstring(), indexloc, indexptr.num, buff.index, typeptr.num, sizeptr.num)
     buff.introspect("Populated")
+    */
 
 

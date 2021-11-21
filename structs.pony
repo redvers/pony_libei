@@ -884,13 +884,44 @@ struct EixbuffTAG
     rv.index = this.index
     consume rv
 
+  fun get_type(indexptr: I32Ptr): ErlTerm =>
+    let typeptr: I32Ptr = I32Ptr
+    let sizeptr: I32Ptr = I32Ptr
+    let res = Ei.ei_get_type(this.buff, indexptr, typeptr, sizeptr)
 
-
-
-
-
-
-
+    match typeptr.num
+    | let x: I32 if (x == 'a') => ErlSmallIntegerext
+    | let x: I32 if (x == 'b') => ErlIntegerExt
+    | let x: I32 if (x == 'c') => ErlFloatExt
+    | let x: I32 if (x == 'F') => NewFloatExt
+    | let x: I32 if (x == 'd') => ErlAtomExt
+    | let x: I32 if (x == 's') => ErlSmallAtomExt
+    | let x: I32 if (x == 'v') => ErlAtomUtf8Ext
+    | let x: I32 if (x == 'w') => ErlSmallAtomUtf8Ext
+    | let x: I32 if (x == 'e') => ErlReferenceExt
+    | let x: I32 if (x == 'r') => ErlNewReferenceExt
+    | let x: I32 if (x == 'Z') => ErlNewerReferenceExt
+    | let x: I32 if (x == 'f') => ErlPortExt
+    | let x: I32 if (x == 'Y') => ErlNewPortExt
+    | let x: I32 if (x == 'g') => ErlPidExt
+    | let x: I32 if (x == 'X') => ErlNewPidExt
+    | let x: I32 if (x == 'h') => ErlSmallTupleExt
+    | let x: I32 if (x == 'i') => ErlLargeTupleExt
+    | let x: I32 if (x == 'j') => ErlNilExt
+    | let x: I32 if (x == 'k') => ErlStringExt
+    | let x: I32 if (x == 'l') => ErlListExt
+    | let x: I32 if (x == 'm') => ErlBinaryExt
+    | let x: I32 if (x == 'M') => ErlBitBinaryExt
+    | let x: I32 if (x == 'n') => ErlSmallBigExt
+    | let x: I32 if (x == 'o') => ErlLargeBigExt
+    | let x: I32 if (x == 'p') => ErlNewFunExt
+    | let x: I32 if (x == 't') => ErlMapExt
+    | let x: I32 if (x == 'u') => ErlFunExt
+    | let x: I32 if (x == 'q') => ErlExportExt
+    | let x: I32 if (x == 'x') => ErlV4PortExt
+    else
+      ErlUnknown
+    end
 
 //use @memcpy[None](dest: U64, src: U64, size: USize)
 /*

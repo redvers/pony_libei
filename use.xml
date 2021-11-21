@@ -1322,9 +1322,9 @@
      lineno="602"
      rv="I32">
      <useargs>
-       <usearg name="s" type="Array[String]"/>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="s" type="U8PtrPtr"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_588" name="ei_x_format"

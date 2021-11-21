@@ -54,6 +54,15 @@
     argtype="F64"
     rvtype="F64"/>
 
+  <typedef name="U8PtrPtr"
+    ponytypein="U8PtrPtr"
+    ponytypeinconv=""
+    ponytypeout="U8PtrPtr"
+    structtype=""
+    structdef=""
+    argtype="U8PtrPtr"
+    rvtype="U8PtrPtr"/>
+
   <typedef name="I32Ptr"
     ponytypein="I32Ptr"
     ponytypeinconv=""
