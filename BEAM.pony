@@ -66,15 +66,17 @@ actor BEAM
 
     Ei.ei_x_new(NullablePointer[EixbuffTAG](buff))
     match Ei.ei_xreceive_msg_tmo(peerbeamfd, NullablePointer[ErlangMsg](msg), NullablePointer[EixbuffTAG](buff), polltime)
-    | let rv: I32 if (rv == 0)  => @printf("TICK\n".cstring())
+    | let rv: I32 if (rv == 0)  =>
+      @printf("TICK\n".cstring())
+      Ei.ei_x_free(NullablePointer[EixbuffTAG](buff))
     | let rv: I32 if (rv == 1)  =>
       let ponybuf: EixbuffTAG iso = recover iso buff.clone() end
+      Ei.ei_x_free(NullablePointer[EixbuffTAG](buff))
       process_msg(consume ponybuf)
     else
       None
     end
 
-    Ei.ei_x_free(NullablePointer[EixbuffTAG](buff))
     wait_for_msg()
 
   fun process_msg(buff: EixbuffTAG) =>
