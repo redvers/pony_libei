@@ -1,4 +1,4 @@
-
+use @memcpy[None](dest: Pointer[None], src: Pointer[None], size: USize)
 
 /*
   Source: /nix/store/hrhn14rls3slhpz0g057c0dyp4lm3rgd-glibc-2.33-47-dev/include/bits/types/struct_timeval.h:8
@@ -871,6 +871,32 @@ struct EixbuffTAG
   var buff: Pointer[U8] = Pointer[U8]
   var buffsz: I32 = I32(0)
   var index: I32 = I32(0)
+
+  fun introspect(txt: String) =>
+    @printf("%s: [ExibuffTAG]: Addr:[%lx], buffsz: %d,index: %d\n".cstring(), txt.cstring(), this, this.buffsz, this.index)
+
+//use @memcpy[None](dest: U64, src: U64, size: USize)
+  fun to_array_iso(): Array[U8] iso^ =>
+    let rv: Array[U8] iso = recover iso Array[U8].init(0, this.buffsz.usize()) end
+    @memcpy(rv.cpointer(), this.buff, this.buffsz.usize())
+    consume rv
+
+  fun to_PonyErlangBuffer(): PonyErlangBuffer iso^ =>
+    let array: Array[U8] iso = this.to_array_iso()
+    let rv: PonyErlangBuffer iso = recover iso PonyErlangBuffer(consume array, this.index) end
+    consume rv
+
+
+
+
+
+class PonyErlangBuffer
+  var array: Array[U8] iso
+  var index: I32
+
+  new create(array': Array[U8] iso, index': I32) =>
+    array = consume array'
+    index = index'
 
 
 /*

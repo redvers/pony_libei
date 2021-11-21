@@ -89,3 +89,7 @@ actor BEAM
     let indexloc: I32 = indexptr.num
     res = Ei.ei_get_type(buff.buff, indexptr, typeptr, sizeptr)
     @printf("[%d - %d]:%d type: %d size: %d\n".cstring(), indexloc, indexptr.num, buff.index, typeptr.num, sizeptr.num)
+    buff.introspect("Populated")
+
+    let ponybuffer: PonyErlangBuffer iso = buff.to_PonyErlangBuffer()
+
