@@ -16,7 +16,7 @@
   <renderuse id="_484" render="1"/><!-- ei_receive_msg -->
   <renderuse id="_485" render="0"/><!-- ei_receive_msg_tmo -->
   <renderuse id="_486" render="1"/><!-- ei_xreceive_msg -->
-  <renderuse id="_487" render="0"/><!-- ei_xreceive_msg_tmo -->
+  <renderuse id="_487" render="1"/><!-- ei_xreceive_msg_tmo -->
   <renderuse id="_488" render="0"/><!-- ei_send -->
   <renderuse id="_489" render="0"/><!-- ei_send_tmo -->
   <renderuse id="_490" render="0"/><!-- ei_reg_send -->
@@ -114,17 +114,17 @@
   <renderuse id="_582" render="0"/><!-- ei_decode_list_header -->
   <renderuse id="_583" render="0"/><!-- ei_decode_map_header -->
   <renderuse id="_584" render="0"/><!-- ei_decode_iodata -->
-  <renderuse id="_585" render="0"/><!-- ei_decode_ei_term -->
-  <renderuse id="_586" render="0"/><!-- ei_print_term -->
+  <renderuse id="_585" render="1"/><!-- ei_decode_ei_term -->
+  <renderuse id="_586" render="1"/><!-- ei_print_term -->
   <renderuse id="_587" render="0"/><!-- ei_s_print_term -->
   <renderuse id="_588" render="0"/><!-- ei_x_format -->
   <renderuse id="_589" render="0"/><!-- ei_x_format_wo_ver -->
   <renderuse id="_590" render="1"/><!-- ei_x_new -->
   <renderuse id="_591" render="0"/><!-- ei_x_new_with_version -->
-  <renderuse id="_592" render="0"/><!-- ei_x_free -->
+  <renderuse id="_592" render="1"/><!-- ei_x_free -->
   <renderuse id="_593" render="0"/><!-- ei_x_append -->
   <renderuse id="_594" render="0"/><!-- ei_x_append_buf -->
-  <renderuse id="_595" render="0"/><!-- ei_skip_term -->
+  <renderuse id="_595" render="1"/><!-- ei_skip_term -->
   <renderuse id="_596" render="0"/><!-- ei_cmp_refs -->
   <renderuse id="_597" render="0"/><!-- ei_cmp_pids -->
   <renderuse id="_598" render="0"/><!-- ei_cmp_ports -->

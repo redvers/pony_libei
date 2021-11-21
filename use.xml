@@ -218,7 +218,7 @@
      rv="I32">
      <useargs>
        <usearg name="fd" type="I32"/>
-       <usearg name="msg" type="NullablePointer[Anon]"/>
+       <usearg name="msg" type="NullablePointer[ErlangMsg]"/>
        <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
        <usearg name="ms" type="U32"/>
      </useargs>
@@ -360,7 +360,7 @@
      rv="I32">
      <useargs>
        <usearg name="ec" type="NullablePointer[Eicnodes]"/>
-       <usearg name="port" type="Pointer[I32]"/>
+       <usearg name="port" type="I32Ptr"/>
        <usearg name="backlog" type="I32"/>
      </useargs>
   </use>
@@ -1052,9 +1052,9 @@
      rv="I32">
      <useargs>
        <usearg name="buf" type="Pointer[U8]"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="typee" type="Pointer[I32]"/>
-       <usearg name="size" type="Pointer[I32]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="typee" type="I32Ptr"/>
+       <usearg name="size" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_564" name="ei_decode_version"
@@ -1064,8 +1064,8 @@
      rv="I32">
      <useargs>
        <usearg name="buf" type="Pointer[U8]"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="version" type="Pointer[I32]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="version" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_565" name="ei_decode_long"
@@ -1300,9 +1300,9 @@
      lineno="594"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="term" type="NullablePointer[Anon]"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="term" type="NullablePointer[EiTerm]"/>
      </useargs>
   </use>
   <use id="_586" name="ei_print_term"

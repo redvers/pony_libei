@@ -3,8 +3,8 @@ all:
 	./pony_libei
 
 codegenuse:
-	saxon-he -xi use.xml ../makeuse-sys.xsl  > use.pony
+	saxon-he -xi use.xml ../castxml2pony/makeuse-sys.xsl  > use.pony
 
 codegenfunctions:
 	echo "primitive Ei" > functions.pony
-	saxon-he -xi use.xml ../makefunctions-sys.xsl >> functions.pony
+	saxon-he -xi use.xml ../castxml2pony/makefunctions-sys.xsl >> functions.pony

@@ -312,10 +312,8 @@ primitive Ei
     [PointerType size=64]->[Struct size=128,fid: f45]
     [FundamentalType(unsigned int) size=32]
 */
-/*
-  fun ei_xreceive_msg_tmo(fd: I32, msg: NullablePointer[Anon] tag, x: NullablePointer[EixbuffTAG] tag, ms: U32): I32 =>
+  fun ei_xreceive_msg_tmo(fd: I32, msg: NullablePointer[ErlangMsg] tag, x: NullablePointer[EixbuffTAG] tag, ms: U32): I32 =>
     @ei_xreceive_msg_tmo(fd, msg, x, ms)
-*/
 
 
 /*
@@ -517,7 +515,7 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [FundamentalType(int) size=32]
 */
-  fun ei_listen(ec: NullablePointer[Eicnodes] tag, port: Pointer[I32] tag, backlog: I32): I32 =>
+  fun ei_listen(ec: NullablePointer[Eicnodes] tag, port: I32Ptr, backlog: I32): I32 =>
     @ei_listen(ec, port, backlog)
 
 
@@ -1587,7 +1585,7 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-  fun ei_get_type(buf: Pointer[U8] tag, index: Pointer[I32] tag, typee: Pointer[I32] tag, size: Pointer[I32] tag): I32 =>
+  fun ei_get_type(buf: Pointer[U8] tag, index: I32Ptr, typee: I32Ptr, size: I32Ptr): I32 =>
     @ei_get_type(buf, index, typee, size)
 
 
@@ -1602,7 +1600,7 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-  fun ei_decode_version(buf: Pointer[U8] tag, index: Pointer[I32] tag, version: Pointer[I32] tag): I32 =>
+  fun ei_decode_version(buf: Pointer[U8] tag, index: I32Ptr, version: I32Ptr): I32 =>
     @ei_decode_version(buf, index, version)
 
 
@@ -1959,10 +1957,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[Struct size=8576,fid: f45]
 */
-/*
-  fun ei_decode_ei_term(buf: String, index: Pointer[I32] tag, term: NullablePointer[Anon] tag): I32 =>
-    @ei_decode_ei_term(buf.cstring(), index, term)
-*/
+  fun ei_decode_ei_term(buf: Pointer[U8] tag, index: I32Ptr, term: NullablePointer[EiTerm] tag): I32 =>
+    @ei_decode_ei_term(buf, index, term)
 
 
 /*
@@ -1976,10 +1972,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-/*
   fun ei_print_term(fp: NullablePointer[IOFILE] tag, buf: String, index: Pointer[I32] tag): I32 =>
     @ei_print_term(fp, buf.cstring(), index)
-*/
 
 
 /*
@@ -2068,10 +2062,8 @@ primitive Ei
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f45]
 */
-/*
   fun ei_x_free(x: NullablePointer[EixbuffTAG] tag): I32 =>
     @ei_x_free(x)
-*/
 
 
 /*
@@ -2117,10 +2109,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-/*
   fun ei_skip_term(buf: String, index: Pointer[I32] tag): I32 =>
     @ei_skip_term(buf.cstring(), index)
-*/
 
 
 /*

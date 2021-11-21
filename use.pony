@@ -80,6 +80,22 @@ use @ei_xreceive_msg[I32](fd: I32, msg: NullablePointer[ErlangMsg] tag, x: Nulla
 
 
 /*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:430
+  Original Name: ei_xreceive_msg_tmo/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:430
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [FundamentalType(int) size=32]
+    [PointerType size=64]->[Struct size=41600,fid: f45]
+    [PointerType size=64]->[Struct size=128,fid: f45]
+    [FundamentalType(unsigned int) size=32]
+*/
+use @ei_xreceive_msg_tmo[I32](fd: I32, msg: NullablePointer[ErlangMsg] tag, x: NullablePointer[EixbuffTAG] tag, ms: U32)
+
+
+
+/*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:446
   Original Name: ei_publish/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:446
 
@@ -104,7 +120,7 @@ use @ei_publish[I32](ec: NullablePointer[Eicnodes] tag, port: I32)
     [PointerType size=64]->[FundamentalType(int) size=32]
     [FundamentalType(int) size=32]
 */
-use @ei_listen[I32](ec: NullablePointer[Eicnodes] tag, port: Pointer[I32] tag, backlog: I32)
+use @ei_listen[I32](ec: NullablePointer[Eicnodes] tag, port: I32Ptr, backlog: I32)
 
 
 
@@ -249,7 +265,7 @@ use @ei_x_encode_tuple_header[I32](x: NullablePointer[EixbuffTAG] tag, n: I64)
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-use @ei_get_type[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, typee: Pointer[I32] tag, size: Pointer[I32] tag)
+use @ei_get_type[I32](buf: Pointer[U8] tag, index: I32Ptr, typee: I32Ptr, size: I32Ptr)
 
 
 
@@ -264,7 +280,7 @@ use @ei_get_type[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, typee: Poin
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-use @ei_decode_version[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, version: Pointer[I32] tag)
+use @ei_decode_version[I32](buf: Pointer[U8] tag, index: I32Ptr, version: I32Ptr)
 
 
 
@@ -299,6 +315,36 @@ use @ei_decode_tuple_header[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, 
 
 
 /*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:594
+  Original Name: ei_decode_ei_term/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:594
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(int) size=32]
+    [PointerType size=64]->[Struct size=8576,fid: f45]
+*/
+use @ei_decode_ei_term[I32](buf: Pointer[U8] tag, index: I32Ptr, term: NullablePointer[EiTerm] tag)
+
+
+
+/*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:601
+  Original Name: ei_print_term/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:601
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=1728,fid: f24]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(int) size=32]
+*/
+use @ei_print_term[I32](fp: NullablePointer[IOFILE] tag, buf: Pointer[U8] tag, index: Pointer[I32] tag)
+
+
+
+/*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:611
   Original Name: ei_x_new/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:611
 
@@ -308,6 +354,33 @@ use @ei_decode_tuple_header[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, 
     [PointerType size=64]->[Struct size=128,fid: f45]
 */
 use @ei_x_new[I32](x: NullablePointer[EixbuffTAG] tag)
+
+
+
+/*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:613
+  Original Name: ei_x_free/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:613
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=128,fid: f45]
+*/
+use @ei_x_free[I32](x: NullablePointer[EixbuffTAG] tag)
+
+
+
+/*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:616
+  Original Name: ei_skip_term/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:616
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(int) size=32]
+*/
+use @ei_skip_term[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag)
 
 
 

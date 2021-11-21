@@ -54,6 +54,15 @@
     argtype="F64"
     rvtype="F64"/>
 
+  <typedef name="I32Ptr"
+    ponytypein="I32Ptr"
+    ponytypeinconv=""
+    ponytypeout="I32Ptr"
+    structtype=""
+    structdef=""
+    argtype="I32Ptr"
+    rvtype="I32Ptr"/>
+
   <typedef name="Pointer[None]"
     ponytypein="Pointer[None] tag"
     ponytypeinconv=""
@@ -71,6 +80,15 @@
     structdef="NullablePointer[ErlangPid].none()"
     argtype="NullablePointer[ErlangPid] tag"
     rvtype="NullablePointer[ErlangPid]"/>
+
+  <typedef name="NullablePointer[EiTerm]"
+    ponytypein="NullablePointer[EiTerm] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[EiTerm]"
+    structtype="NullablePointer[EiTerm]"
+    structdef="NullablePointer[EiTerm].none()"
+    argtype="NullablePointer[EiTerm] tag"
+    rvtype="NullablePointer[EiTerm]"/>
 
   <typedef name="NullablePointer[EixbuffTAG]"
     ponytypein="NullablePointer[EixbuffTAG] tag"

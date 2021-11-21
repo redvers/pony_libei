@@ -772,7 +772,7 @@ struct EiTerm
   var ei_type: U8 = U8(0)
   var arity: I32 = I32(0)
   var size: I32 = I32(0)
-  var value: None = None
+  var value: ErlangValue = ErlangValue
 
 
 /*
@@ -943,3 +943,8 @@ struct ErlangFunUnionA
 struct ErlangFunUnionB
   var func: Pointer[U8] = Pointer[U8]
   var func_allocated: I32 = I32(0)
+
+
+struct I32Ptr
+  var num: I32 = I32(0)
+
