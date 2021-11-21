@@ -641,6 +641,11 @@ struct ErlangPid
   var serial: U32 = U32(0)
   var creation: U32 = U32(0)
 
+//  fun ref render() =>
+//    let buff: EixbuffTAG = EixbuffTAG
+//    Ei.ei_x_new(NullablePointer[EixbuffTAG](buff))
+//    Ei.ei_x_encode_pid(NullablePointer[EixbuffTAG](buff), NullablePointer[ErlangPid](this))
+//    (Then decode it again into a string)
 
 /*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:248

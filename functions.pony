@@ -1325,10 +1325,8 @@ primitive Ei
     [PointerType size=64]->[Struct size=128,fid: f45]
     [PointerType size=64]->[Struct size=8288,fid: f45]
 */
-/*
-  fun ei_x_encode_pid(x: NullablePointer[EixbuffTAG] tag, pid: NullablePointer[Anon] tag): I32 =>
+  fun ei_x_encode_pid(x: NullablePointer[EixbuffTAG] tag, pid: NullablePointer[ErlangPid] tag): I32 =>
     @ei_x_encode_pid(x, pid)
-*/
 
 
 /*
@@ -1824,8 +1822,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[Struct size=8288,fid: f45]
 */
-  fun ei_decode_pid(buf: String, index: Pointer[I32] tag, p: NullablePointer[ErlangPid] tag): I32 =>
-    @ei_decode_pid(buf.cstring(), index, p)
+  fun ei_decode_pid(buf: Pointer[U8] tag, index: Pointer[I32] tag, p: NullablePointer[ErlangPid] tag): I32 =>
+    @ei_decode_pid(buf, index, p)
 
 
 /*

@@ -76,7 +76,7 @@
   <renderuse id="_544" render="0"/><!-- ei_x_encode_binary -->
   <renderuse id="_545" render="0"/><!-- ei_x_encode_bitstring -->
   <renderuse id="_546" render="0"/><!-- ei_encode_pid -->
-  <renderuse id="_547" render="0"/><!-- ei_x_encode_pid -->
+  <renderuse id="_547" render="1"/><!-- ei_x_encode_pid -->
   <renderuse id="_548" render="0"/><!-- ei_encode_fun -->
   <renderuse id="_549" render="0"/><!-- ei_x_encode_fun -->
   <renderuse id="_550" render="0"/><!-- ei_encode_port -->

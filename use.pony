@@ -225,6 +225,20 @@ use @ei_x_encode_atom[I32](x: NullablePointer[EixbuffTAG] tag, s: Pointer[U8] ta
 
 
 /*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:528
+  Original Name: ei_x_encode_pid/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:528
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=128,fid: f45]
+    [PointerType size=64]->[Struct size=8288,fid: f45]
+*/
+use @ei_x_encode_pid[I32](x: NullablePointer[EixbuffTAG] tag, pid: NullablePointer[ErlangPid] tag)
+
+
+
+/*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:537
   Original Name: ei_encode_tuple_header/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:537
 

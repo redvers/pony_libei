@@ -886,7 +886,7 @@
      rv="I32">
      <useargs>
        <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
-       <usearg name="pid" type="NullablePointer[Anon]"/>
+       <usearg name="pid" type="NullablePointer[ErlangPid]"/>
      </useargs>
   </use>
   <use id="_548" name="ei_encode_fun"
@@ -1211,7 +1211,7 @@
      lineno="579"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
+       <usearg name="buf" type="Pointer[U8]"/>
        <usearg name="index" type="Pointer[I32]"/>
        <usearg name="p" type="NullablePointer[ErlangPid]"/>
      </useargs>
