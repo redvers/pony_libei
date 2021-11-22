@@ -230,8 +230,8 @@
      rv="I32">
      <useargs>
        <usearg name="fd" type="I32"/>
-       <usearg name="to" type="NullablePointer[Anon]"/>
-       <usearg name="buf" type="String"/>
+       <usearg name="to" type="NullablePointer[ErlangPid]"/>
+       <usearg name="buf" type="Pointer[U8]"/>
        <usearg name="len" type="I32"/>
      </useargs>
   </use>
@@ -562,8 +562,8 @@
      lineno="495"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_519" name="ei_x_encode_version"
@@ -949,7 +949,7 @@
      rv="I32">
      <useargs>
        <usearg name="x" type="NullablePointer[EixbuffTAG]"/>
-       <usearg name="p" type="NullablePointer[Anon]"/>
+       <usearg name="p" type="NullablePointer[ErlangRef]"/>
      </useargs>
   </use>
   <use id="_554" name="ei_encode_trace"
@@ -1212,7 +1212,7 @@
      rv="I32">
      <useargs>
        <usearg name="buf" type="Pointer[U8]"/>
-       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="index" type="I32Ptr"/>
        <usearg name="p" type="NullablePointer[ErlangPid]"/>
      </useargs>
   </use>
@@ -1233,9 +1233,9 @@
      lineno="581"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="p" type="NullablePointer[Anon]"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="p" type="NullablePointer[ErlangRef]"/>
      </useargs>
   </use>
   <use id="_580" name="ei_decode_trace"
@@ -1266,9 +1266,9 @@
      lineno="584"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="arity" type="Pointer[I32]"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="arity" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_583" name="ei_decode_map_header"

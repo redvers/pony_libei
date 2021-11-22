@@ -328,10 +328,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(char) size=8]
     [FundamentalType(int) size=32]
 */
-/*
-  fun ei_send(fd: I32, to: NullablePointer[Anon] tag, buf: String, len: I32): I32 =>
-    @ei_send(fd, to, buf.cstring(), len)
-*/
+  fun ei_send(fd: I32, to: NullablePointer[ErlangPid] tag, buf: Pointer[U8] tag, len: I32): I32 =>
+    @ei_send(fd, to, buf, len)
 
 
 /*
@@ -836,10 +834,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-/*
-  fun ei_encode_version(buf: String, index: Pointer[I32] tag): I32 =>
-    @ei_encode_version(buf.cstring(), index)
-*/
+  fun ei_encode_version(buf: Pointer[U8] tag, index: I32Ptr): I32 =>
+    @ei_encode_version(buf, index)
 
 
 /*
@@ -851,10 +847,8 @@ primitive Ei
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f45]
 */
-/*
   fun ei_x_encode_version(x: NullablePointer[EixbuffTAG] tag): I32 =>
     @ei_x_encode_version(x)
-*/
 
 
 /*
@@ -1063,10 +1057,8 @@ primitive Ei
     [PointerType size=64]->[Struct size=128,fid: f45]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-/*
   fun ei_x_encode_string(x: NullablePointer[EixbuffTAG] tag, s: String): I32 =>
     @ei_x_encode_string(x, s.cstring())
-*/
 
 
 /*
@@ -1422,10 +1414,8 @@ primitive Ei
     [PointerType size=64]->[Struct size=128,fid: f45]
     [PointerType size=64]->[Struct size=8416,fid: f45]
 */
-/*
-  fun ei_x_encode_ref(x: NullablePointer[EixbuffTAG] tag, p: NullablePointer[Anon] tag): I32 =>
+  fun ei_x_encode_ref(x: NullablePointer[EixbuffTAG] tag, p: NullablePointer[ErlangRef] tag): I32 =>
     @ei_x_encode_ref(x, p)
-*/
 
 
 /*
@@ -1517,10 +1507,8 @@ primitive Ei
     [PointerType size=64]->[Struct size=128,fid: f45]
     [FundamentalType(long int) size=64]
 */
-/*
   fun ei_x_encode_list_header(x: NullablePointer[EixbuffTAG] tag, n: I64): I32 =>
     @ei_x_encode_list_header(x, n)
-*/
 
 
 /*
@@ -1532,10 +1520,8 @@ primitive Ei
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f45]
 */
-/*
   fun ei_x_encode_empty_list(x: NullablePointer[EixbuffTAG] tag): I32 =>
     @ei_x_encode_empty_list(x)
-*/
 
 
 /*
@@ -1820,7 +1806,7 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[Struct size=8288,fid: f45]
 */
-  fun ei_decode_pid(buf: Pointer[U8] tag, index: Pointer[I32] tag, p: NullablePointer[ErlangPid] tag): I32 =>
+  fun ei_decode_pid(buf: Pointer[U8] tag, index: I32Ptr, p: NullablePointer[ErlangPid] tag): I32 =>
     @ei_decode_pid(buf, index, p)
 
 
@@ -1852,10 +1838,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[Struct size=8416,fid: f45]
 */
-/*
-  fun ei_decode_ref(buf: String, index: Pointer[I32] tag, p: NullablePointer[Anon] tag): I32 =>
-    @ei_decode_ref(buf.cstring(), index, p)
-*/
+  fun ei_decode_ref(buf: Pointer[U8] tag, index: I32Ptr, p: NullablePointer[ErlangRef] tag): I32 =>
+    @ei_decode_ref(buf, index, p)
 
 
 /*
@@ -1901,10 +1885,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-/*
-  fun ei_decode_list_header(buf: String, index: Pointer[I32] tag, arity: Pointer[I32] tag): I32 =>
-    @ei_decode_list_header(buf.cstring(), index, arity)
-*/
+  fun ei_decode_list_header(buf: Pointer[U8] tag, index: I32Ptr, arity: I32Ptr): I32 =>
+    @ei_decode_list_header(buf, index, arity)
 
 
 /*
@@ -2041,10 +2023,8 @@ primitive Ei
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f45]
 */
-/*
   fun ei_x_new_with_version(x: NullablePointer[EixbuffTAG] tag): I32 =>
     @ei_x_new_with_version(x)
-*/
 
 
 /*

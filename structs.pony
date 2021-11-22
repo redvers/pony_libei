@@ -677,9 +677,13 @@ struct ErlangPort
      008384: [FundamentalType(unsigned int) size=32]: creation
 */
 struct ErlangRef
-  var node: Pointer[U8] = Pointer[U8]
+  embed node: ErlangNode = ErlangNode
   var len: I32 = I32(0)
-  var n: Pointer[U32] = Pointer[U32]
+  var n0: U32 = U32(0)
+  var n1: U32 = U32(0)
+  var n2: U32 = U32(0)
+  var n3: U32 = U32(0)
+  var n4: U32 = U32(0)
   var creation: U32 = U32(0)
 
 

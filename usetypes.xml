@@ -90,6 +90,15 @@
     argtype="NullablePointer[ErlangPid] tag"
     rvtype="NullablePointer[ErlangPid]"/>
 
+  <typedef name="NullablePointer[ErlangRef]"
+    ponytypein="NullablePointer[ErlangRef] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[ErlangRef]"
+    structtype="NullablePointer[ErlangRef]"
+    structdef="NullablePointer[ErlangRef].none()"
+    argtype="NullablePointer[ErlangRef] tag"
+    rvtype="NullablePointer[ErlangRef]"/>
+
   <typedef name="NullablePointer[EiTerm]"
     ponytypein="NullablePointer[EiTerm] tag"
     ponytypeinconv=""

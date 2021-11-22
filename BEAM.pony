@@ -7,6 +7,7 @@ use "debug"
 
 actor BEAM
   let ec: Eicnodes = Eicnodes
+  let erlangactor: Main tag
   let conn: ErlConnect = ErlConnect // One node at a time please
   let nodename: String
   let cookie: String
@@ -17,7 +18,8 @@ actor BEAM
   let peerbeamfd: I32
   let polltime: U32
 
-  new create(nodename': String, cookie': String, polltime': U32) =>
+  new create(erlangactor': Main tag, nodename': String, cookie': String, polltime': U32) =>
+    erlangactor = erlangactor'
     nodename = nodename'
     cookie = cookie'
     polltime = polltime'
@@ -53,7 +55,6 @@ actor BEAM
       @printf("[%d] Unable to global_register PID for gateway\n".cstring(), peerbeamfd)
       @exit(1)
     end
-
     wait_for_msg()
 
   be wait_for_msg() =>
@@ -74,35 +75,19 @@ actor BEAM
 
     wait_for_msg()
 
-  fun process_msg(buff: EixbuffTAG val) =>
+  fun process_msg(buff: EixbuffTAG iso) =>
     if (buff.is_otp_cast()) then @printf("is_cast\n".cstring()) end
-    if (buff.is_otp_call()) then @printf("is_call\n".cstring()) end
-
-    ErlUnknown.render(buff.buff, 1)
-//    @printf("MESSAGE\n".cstring())
-/*
-    let t: EiTerm = EiTerm
-    let indexptr: I32Ptr = I32Ptr
-    let versionptr: I32Ptr = I32Ptr
-    var res: I32 = Ei.ei_decode_version(buff.buff, indexptr, versionptr)
-//    @printf("[0 - %d]:%d version: %d\n".cstring(), indexptr.num, buff.index, versionptr.num)
-
-    let etype: ErlTerm = buff.get_type(indexptr)
-//    @printf("[%d]:%d\n".cstring(), indexptr.num, buff.index)
-
-    etype.render(buff.buff, indexptr.num)
-    */
+    if (buff.is_otp_call()) then
+      erlangactor.get_call(consume buff)
+      @printf("is_call\n".cstring()) end
 
 
 
-
-/*
-    let typeptr: I32Ptr = I32Ptr
-    let sizeptr: I32Ptr = I32Ptr
-    let indexloc: I32 = indexptr.num
-    res = Ei.ei_get_type(buff.buff, indexptr, typeptr, sizeptr)
-    @printf("[%d - %d]:%d type: %d size: %d\n".cstring(), indexloc, indexptr.num, buff.index, typeptr.num, sizeptr.num)
-    buff.introspect("Populated")
-    */
-
+  be send(dest: NullablePointer[ErlangPid] iso, buff: NullablePointer[EixbuffTAG] iso^) =>
+    try
+      let buffer: EixbuffTAG iso = recover iso buff.apply()? end
+      if (Ei.ei_send(peerbeamfd, consume dest, buffer.buff, buffer.index) != 0) then error end
+    else
+      @printf("Message send failed\n".cstring())
+    end
 
