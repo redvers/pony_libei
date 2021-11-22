@@ -1715,10 +1715,8 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-/*
-  fun ei_decode_atom(buf: String, index: Pointer[I32] tag, p: String): I32 =>
-    @ei_decode_atom(buf.cstring(), index, p.cstring())
-*/
+  fun ei_decode_atom(buf: Pointer[U8] tag, index: I32Ptr, p: Pointer[U8] tag): I32 =>
+    @ei_decode_atom(buf, index, p)
 
 
 /*
@@ -1888,7 +1886,7 @@ primitive Ei
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-  fun ei_decode_tuple_header(buf: Pointer[U8] tag, index: Pointer[I32] tag, arity: Pointer[I32] tag): I32 =>
+  fun ei_decode_tuple_header(buf: Pointer[U8] tag, index: I32Ptr, arity: I32Ptr): I32 =>
     @ei_decode_tuple_header(buf, index, arity)
 
 

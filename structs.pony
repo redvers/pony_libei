@@ -881,6 +881,42 @@ struct EixbuffTAG
 
   fun introspect(txt: String) =>
     @printf("%s: [ExibuffTAG]: Addr:[%lx], buffsz: %d,index: %d\n".cstring(), txt.cstring(), this, this.buffsz, this.index)
+
+  fun is_otp_cast(): Bool =>
+    let atomptr: Pointer[U8] = @pony_alloc(@pony_ctx(), USize(256))
+    let indexptr: I32Ptr = I32Ptr
+    let versionptr: I32Ptr = I32Ptr
+    let arityptr: I32Ptr = I32Ptr
+
+    try
+      if (Ei.ei_decode_version(buff, indexptr, versionptr) != 0) then error end
+      if (Ei.ei_decode_tuple_header(buff, indexptr, arityptr) != 0) then error end
+      if (arityptr.num != 2) then error end
+      if (Ei.ei_decode_atom(buff, indexptr, atomptr) != 0) then error end
+      if (String.from_cstring(atomptr) != "$gen_cast") then error end
+      true
+    else
+      false
+    end
+
+  fun is_otp_call(): Bool =>
+    let atomptr: Pointer[U8] = @pony_alloc(@pony_ctx(), USize(256))
+    let indexptr: I32Ptr = I32Ptr
+    let versionptr: I32Ptr = I32Ptr
+    let arityptr: I32Ptr = I32Ptr
+
+    try
+      if (Ei.ei_decode_version(buff, indexptr, versionptr) != 0) then error end
+      if (Ei.ei_decode_tuple_header(buff, indexptr, arityptr) != 0) then error end
+      if (arityptr.num != 3) then error end
+      if (Ei.ei_decode_atom(buff, indexptr, atomptr) != 0) then error end
+      if (String.from_cstring(atomptr) != "$gen_call") then error end
+      true
+    else
+      false
+    end
+
+
   fun clone(): EixbuffTAG iso^ =>
     let rv: EixbuffTAG iso = recover iso EixbuffTAG end
     rv.buff = @pony_alloc(@pony_ctx(), this.buffsz.usize())

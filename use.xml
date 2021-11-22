@@ -1140,9 +1140,9 @@
      lineno="571"
      rv="I32">
      <useargs>
-       <usearg name="buf" type="String"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="p" type="String"/>
+       <usearg name="buf" type="Pointer[U8]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="p" type="Pointer[U8]"/>
      </useargs>
   </use>
   <use id="_572" name="ei_decode_atom_as"
@@ -1256,8 +1256,8 @@
      rv="I32">
      <useargs>
        <usearg name="buf" type="Pointer[U8]"/>
-       <usearg name="index" type="Pointer[I32]"/>
-       <usearg name="arity" type="Pointer[I32]"/>
+       <usearg name="index" type="I32Ptr"/>
+       <usearg name="arity" type="I32Ptr"/>
      </useargs>
   </use>
   <use id="_582" name="ei_decode_list_header"

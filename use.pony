@@ -299,6 +299,21 @@ use @ei_decode_version[I32](buf: Pointer[U8] tag, index: I32Ptr, version: I32Ptr
 
 
 /*
+  Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:571
+  Original Name: ei_decode_atom/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:571
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[FundamentalType(int) size=32]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @ei_decode_atom[I32](buf: Pointer[U8] tag, index: I32Ptr, p: Pointer[U8] tag)
+
+
+
+/*
   Source: /nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:579
   Original Name: ei_decode_pid/nix/store/zvy303b311sy7v2dl0df3w22my0qq6mm-erlang-24.0.6/lib/erlang/lib/erl_interface-5.0.1/include/ei.h:579
 
@@ -324,7 +339,7 @@ use @ei_decode_pid[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, p: Nullab
     [PointerType size=64]->[FundamentalType(int) size=32]
     [PointerType size=64]->[FundamentalType(int) size=32]
 */
-use @ei_decode_tuple_header[I32](buf: Pointer[U8] tag, index: Pointer[I32] tag, arity: Pointer[I32] tag)
+use @ei_decode_tuple_header[I32](buf: Pointer[U8] tag, index: I32Ptr, arity: I32Ptr)
 
 
 

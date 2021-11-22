@@ -100,7 +100,7 @@
   <renderuse id="_568" render="0"/><!-- ei_decode_boolean -->
   <renderuse id="_569" render="0"/><!-- ei_decode_char -->
   <renderuse id="_570" render="0"/><!-- ei_decode_string -->
-  <renderuse id="_571" render="0"/><!-- ei_decode_atom -->
+  <renderuse id="_571" render="1"/><!-- ei_decode_atom -->
   <renderuse id="_572" render="0"/><!-- ei_decode_atom_as -->
   <renderuse id="_573" render="0"/><!-- ei_decode_binary -->
   <renderuse id="_574" render="0"/><!-- ei_decode_bitstring -->

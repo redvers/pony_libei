@@ -42,8 +42,6 @@ actor BEAM
     if (peerbeamfd < 0) then
       @printf("[%d] incoming connection failed\n".cstring(), peerbeamfd)
       @exit(1)
-    else
-      @printf("[%d] incoming connection established\n".cstring(), peerbeamfd)
     end
 
     if (Ei.ei_make_pid(NullablePointer[Eicnodes](ec), NullablePointer[ErlangPid](beampid)) != 0) then
@@ -54,8 +52,6 @@ actor BEAM
     if (Ei.ei_global_register(peerbeamfd, nodename, NullablePointer[ErlangPid](beampid)) != 0) then
       @printf("[%d] Unable to global_register PID for gateway\n".cstring(), peerbeamfd)
       @exit(1)
-    else
-      @printf("[%s] Globally registered to connected cluster\n".cstring(), nodename.cstring())
     end
 
     wait_for_msg()
@@ -67,7 +63,6 @@ actor BEAM
     Ei.ei_x_new(NullablePointer[EixbuffTAG](buff))
     match Ei.ei_xreceive_msg_tmo(peerbeamfd, NullablePointer[ErlangMsg](msg), NullablePointer[EixbuffTAG](buff), polltime)
     | let rv: I32 if (rv == 0)  =>
-      @printf("TICK\n".cstring())
       Ei.ei_x_free(NullablePointer[EixbuffTAG](buff))
     | let rv: I32 if (rv == 1)  =>
       let ponybuf: EixbuffTAG iso = recover iso buff.clone() end
@@ -80,18 +75,23 @@ actor BEAM
     wait_for_msg()
 
   fun process_msg(buff: EixbuffTAG val) =>
-    @printf("MESSAGE\n".cstring())
+    if (buff.is_otp_cast()) then @printf("is_cast\n".cstring()) end
+    if (buff.is_otp_call()) then @printf("is_call\n".cstring()) end
 
+    ErlUnknown.render(buff.buff, 1)
+//    @printf("MESSAGE\n".cstring())
+/*
     let t: EiTerm = EiTerm
     let indexptr: I32Ptr = I32Ptr
     let versionptr: I32Ptr = I32Ptr
     var res: I32 = Ei.ei_decode_version(buff.buff, indexptr, versionptr)
-    @printf("[0 - %d]:%d version: %d\n".cstring(), indexptr.num, buff.index, versionptr.num)
+//    @printf("[0 - %d]:%d version: %d\n".cstring(), indexptr.num, buff.index, versionptr.num)
 
     let etype: ErlTerm = buff.get_type(indexptr)
-    @printf("[%d]:%d\n".cstring(), indexptr.num, buff.index)
+//    @printf("[%d]:%d\n".cstring(), indexptr.num, buff.index)
 
     etype.render(buff.buff, indexptr.num)
+    */
 
 
 

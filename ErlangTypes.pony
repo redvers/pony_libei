@@ -39,8 +39,6 @@ interface ErlTermInterface
     lindexptr.num = index
 
     let strlen: I32 = Ei.ei_s_print_term(u8ptrptr, buff, lindexptr)
-    @printf("len: %d\n".cstring(), strlen)
-
     let s: String val = String.from_cpointer(u8ptrptr.u8ptr, strlen.usize()).clone()
     @printf("%s\n".cstring(), s.cstring())
 
@@ -48,7 +46,4 @@ interface ErlTermInterface
 
 struct U8PtrPtr
   var u8ptr: Pointer[U8] = Pointer[U8]
-
-
-
 
