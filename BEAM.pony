@@ -75,7 +75,7 @@ actor BEAMSession is AsioEventNotify
 
     if (Ei.ei_global_register(fd, nodename, NullablePointer[ErlangPid](beampid)) != 0) then
       @printf("[%d] Unable to global_register PID for gateway\n".cstring(), fd)
-      @exit(1)
+//      @exit(1)
     end
     Debug.out("Listener established and control node is globally registered")
     PonyAsio.create_event(this, fd.u32())
