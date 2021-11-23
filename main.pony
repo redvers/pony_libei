@@ -12,7 +12,7 @@ actor Main
   fun exit(x: I32) =>
     @exit(x)
 
-  be get_call(buff: EixbuffTAG iso) =>
+  be get_call(beamsession: BEAMSession, buff: EixbuffTAG iso) =>
     ErlUnknown.render(buff.buff, 1)
     @printf("Reached in Main.get_call\n".cstring())
     let atomptr: Pointer[U8] = @pony_alloc(@pony_ctx(), USize(256))
@@ -48,15 +48,10 @@ actor Main
       Ei.ei_x_encode_ref(replybuf, senderref)
       Ei.ei_x_encode_string(replybuf, "Fundamentals of gen_server have been proved")
 
-			ponybeam.send(consume senderpid, consume replybuf)
+      beamsession.send(consume senderpid, consume replybuf)
     else
       @printf("Failed in Main\n".cstring())
     end
-
-
-
-
-
 
 
 

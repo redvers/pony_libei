@@ -929,7 +929,7 @@ struct EixbuffTAG
     rv.index = this.index
     consume rv
 
-  fun get_type(indexptr: I32Ptr): ErlTerm =>
+  fun iso get_type(indexptr: I32Ptr): ErlTerm =>
     let typeptr: I32Ptr = I32Ptr
     let sizeptr: I32Ptr = I32Ptr
     let res = Ei.ei_get_type(this.buff, indexptr, typeptr, sizeptr)
